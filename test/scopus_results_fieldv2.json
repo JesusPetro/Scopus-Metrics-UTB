@@ -1,0 +1,2282 @@
+{
+  "search-results": {
+    "opensearch:totalResults": "1492",
+    "opensearch:startIndex": "0",
+    "opensearch:itemsPerPage": "25",
+    "opensearch:Query": {
+      "@role": "request",
+      "@searchTerms": "AF-ID ( 60103889 )",
+      "@startPage": "0"
+    },
+    "link": [
+      {
+        "@_fa": "true",
+        "@ref": "self",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=AF-ID+%28+60103889+%29&view=COMPLETE",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "first",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=AF-ID+%28+60103889+%29&view=COMPLETE",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "next",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=25&count=25&query=AF-ID+%28+60103889+%29&view=COMPLETE",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "last",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=1467&count=25&query=AF-ID+%28+60103889+%29&view=COMPLETE",
+        "@type": "application/json"
+      }
+    ],
+    "entry": [
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105013662781",
+        "dc:title": "Biogeochemical study of the periglacial slopes of the Nevado del Ruíz volcano (Colombia) as a terrestrial analog of Mars",
+        "prism:publicationName": "Icarus",
+        "prism:volume": "443",
+        "prism:pageRange": null,
+        "prism:coverDate": "2026-01-01",
+        "prism:doi": "10.1016/j.icarus.2025.116783",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58310191500",
+            "authid": "58310191500",
+            "authname": "Leal M.A.",
+            "surname": "Leal",
+            "given-name": "M. A.",
+            "initials": "M.A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58310000000",
+            "authid": "58310000000",
+            "authname": "Tovar D.",
+            "surname": "Tovar",
+            "given-name": "D.",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7003652519",
+            "authid": "7003652519",
+            "authname": "de Pablo M.A.",
+            "surname": "de Pablo",
+            "given-name": "M. A.",
+            "initials": "M.A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60054445900",
+            "authid": "60054445900",
+            "authname": "Bonilla M.A.",
+            "surname": "Bonilla",
+            "given-name": "M. A.",
+            "initials": "M.A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58602787700",
+            "authid": "58602787700",
+            "authname": "Bolaños J.",
+            "surname": "Bolaños",
+            "given-name": "J.",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59476576300",
+            "authid": "59476576300",
+            "authname": "Ruíz E.",
+            "surname": "Ruíz",
+            "given-name": "E.",
+            "initials": "E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7403998164",
+            "authid": "7403998164",
+            "authname": "Sánchez J.",
+            "surname": "Sánchez",
+            "given-name": "J.",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "8",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57223365087",
+            "authid": "57223365087",
+            "authname": "Buitrago J.",
+            "surname": "Buitrago",
+            "given-name": "J.",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "9",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56119288800",
+            "authid": "56119288800",
+            "authname": "Leone G.",
+            "surname": "Leone",
+            "given-name": "G.",
+            "initials": "G."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "10",
+            "author-url": "https://api.elsevier.com/content/author/author_id/16640475100",
+            "authid": "16640475100",
+            "authname": "Tchegliakova N.",
+            "surname": "Tchegliakova",
+            "given-name": "N.",
+            "initials": "N."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "11",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56817944000",
+            "authid": "56817944000",
+            "authname": "Molina A.",
+            "surname": "Molina",
+            "given-name": "A.",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "12",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60053814400",
+            "authid": "60053814400",
+            "authname": "Martín J.S.",
+            "surname": "Martín",
+            "given-name": "J. San",
+            "initials": "J.S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "13",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56116389500",
+            "authid": "56116389500",
+            "authname": "Chacón Z.",
+            "surname": "Chacón",
+            "given-name": "Z.",
+            "initials": "Z."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "14",
+            "author-url": "https://api.elsevier.com/content/author/author_id/23102245500",
+            "authid": "23102245500",
+            "authname": "Abrevaya X.",
+            "surname": "Abrevaya",
+            "given-name": "X.",
+            "initials": "X."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "15",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60053972400",
+            "authid": "60053972400",
+            "authname": "Vélez F.",
+            "surname": "Vélez",
+            "given-name": "F.",
+            "initials": "F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "16",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60054759300",
+            "authid": "60054759300",
+            "authname": "Torres A.",
+            "surname": "Torres",
+            "given-name": "A.",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "17",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60053972500",
+            "authid": "60053972500",
+            "authname": "Reyes R.",
+            "surname": "Reyes",
+            "given-name": "R.",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "18",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55102731600",
+            "authid": "55102731600",
+            "authname": "Cancino-Escalante G.",
+            "surname": "Cancino-Escalante",
+            "given-name": "G.",
+            "initials": "G."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "19",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56674579200",
+            "authid": "56674579200",
+            "authname": "Acevedo-Barrios R.",
+            "surname": "Acevedo-Barrios",
+            "given-name": "R.",
+            "initials": "R."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105012947038",
+        "dc:title": "Enhancing consistency in piping and instrumentation diagrams using DistilBERT and smart PID systems",
+        "prism:publicationName": "Systems and Soft Computing",
+        "prism:volume": "7",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-12-01",
+        "prism:doi": "10.1016/j.sasc.2025.200373",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60036445200",
+            "authid": "60036445200",
+            "authname": "Gómez-Vega F.S.",
+            "surname": "Gómez-Vega",
+            "given-name": "F. S.",
+            "initials": "F.S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60036445300",
+            "authid": "60036445300",
+            "authname": "Acuña O.",
+            "surname": "Acuña",
+            "given-name": "O.",
+            "initials": "O."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60035839800",
+            "authid": "60035839800",
+            "authname": "Camargo A.C.",
+            "surname": "Camargo",
+            "given-name": "Andrea C.",
+            "initials": "A.C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60035987100",
+            "authid": "60035987100",
+            "authname": "Jimenez J.D.",
+            "surname": "Jimenez",
+            "given-name": "Jeison D.",
+            "initials": "J.D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60036445400",
+            "authid": "60036445400",
+            "authname": "Galeano S.M.",
+            "surname": "Galeano",
+            "given-name": "Sara M.",
+            "initials": "S.M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60035839900",
+            "authid": "60035839900",
+            "authname": "Franco I.E.",
+            "surname": "Franco",
+            "given-name": "Isabella E.",
+            "initials": "I.E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60035376700",
+            "authid": "60035376700",
+            "authname": "Lozano L.L.",
+            "surname": "Lozano",
+            "given-name": "Laura L.",
+            "initials": "L.L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "8",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57205400052",
+            "authid": "57205400052",
+            "authname": "Vásquez J.",
+            "surname": "Vásquez",
+            "given-name": "Jenifer",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "9",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+            "authid": "57202285682",
+            "orcid": "0000-0002-0758-1851",
+            "authname": "Puertas E.",
+            "surname": "Puertas",
+            "given-name": "Edwin",
+            "initials": "E."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105004426668",
+        "dc:title": "“The professionals weren’t from here”: provision of mental health services in the context of the Colombian armed conflict",
+        "prism:publicationName": "Archives of Public Health",
+        "prism:volume": "83",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-12-01",
+        "prism:doi": "10.1186/s13690-025-01561-z",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56491243500",
+            "authid": "56491243500",
+            "orcid": "0000-0002-7672-9776",
+            "authname": "Rubio-León D.C.",
+            "surname": "Rubio-León",
+            "given-name": "Diana Carolina",
+            "initials": "D.C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59360499800",
+            "authid": "59360499800",
+            "orcid": "0009-0007-7122-2996",
+            "authname": "Cano-Sierra L.",
+            "surname": "Cano-Sierra",
+            "given-name": "Laura",
+            "initials": "L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59361500800",
+            "authid": "59361500800",
+            "orcid": "0000-0001-5055-5651",
+            "authname": "Reyes-Rivera M.J.",
+            "surname": "Reyes-Rivera",
+            "given-name": "María Juliana",
+            "initials": "M.J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59360833800",
+            "authid": "59360833800",
+            "orcid": "0009-0009-2723-4820",
+            "authname": "Forero-García S.L.",
+            "surname": "Forero-García",
+            "given-name": "Sara Lucia",
+            "initials": "S.L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58145290800",
+            "authid": "58145290800",
+            "orcid": "0000-0001-9888-397X",
+            "authname": "García-Padilla D.",
+            "surname": "García-Padilla",
+            "given-name": "Dennys",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58145499200",
+            "authid": "58145499200",
+            "orcid": "0000-0002-9862-9493",
+            "authname": "Abitbol P.",
+            "surname": "Abitbol",
+            "given-name": "Pablo",
+            "initials": "P."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58547918000",
+            "authid": "58547918000",
+            "orcid": "0000-0002-2964-0402",
+            "authname": "López-López W.",
+            "surname": "López-López",
+            "given-name": "Wilson",
+            "initials": "W."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105003811483",
+        "dc:title": "Microbiological analysis of cigarette butts and cigarette butt fibers on a tourist beach in Cartagena, Colombia",
+        "prism:publicationName": "Scientific Reports",
+        "prism:volume": "15",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-12-01",
+        "prism:doi": "10.1038/s41598-025-91488-w",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55258973100",
+            "authid": "55258973100",
+            "authname": "Díaz-Mendoza C.",
+            "surname": "Díaz-Mendoza",
+            "given-name": "Claudia",
+            "initials": "C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/8693393400",
+            "authid": "8693393400",
+            "authname": "Mouthon-Bello J.",
+            "surname": "Mouthon-Bello",
+            "given-name": "Javier",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55851674100",
+            "authid": "55851674100",
+            "authname": "Botero C.M.",
+            "surname": "Botero",
+            "given-name": "Camilo M.",
+            "initials": "C.M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56674579200",
+            "authid": "56674579200",
+            "authname": "Acevedo-Barrios R.",
+            "surname": "Acevedo-Barrios",
+            "given-name": "Rosa",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/35186188000",
+            "authid": "35186188000",
+            "authname": "Gutiérrez L.",
+            "surname": "Gutiérrez",
+            "given-name": "Leonardo",
+            "initials": "L."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105013839047",
+        "dc:title": "Fast computation of 3D domain integrals in boundary element methods using meshless integration methods: Application to Poisson's equation",
+        "prism:publicationName": "Engineering Analysis with Boundary Elements",
+        "prism:volume": "179",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-10-01",
+        "prism:doi": "10.1016/j.enganabound.2025.106430",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57224404584",
+            "authid": "57224404584",
+            "orcid": "0000-0003-1273-5568",
+            "authname": "Narváez A.",
+            "surname": "Narváez",
+            "given-name": "A.",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/24537991200",
+            "authid": "24537991200",
+            "orcid": "0000-0002-9761-2067",
+            "authname": "Useche J.",
+            "surname": "Useche",
+            "given-name": "J.",
+            "initials": "J."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105014601429",
+        "dc:title": "Calibration of multimodal 3D structured-light systems using digital features",
+        "prism:publicationName": "Applied Optics",
+        "prism:volume": "64",
+        "prism:issueIdentifier": "25",
+        "prism:pageRange": "7333-7343",
+        "prism:coverDate": "2025-09-01",
+        "prism:doi": "10.1364/AO.569536",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57195681584",
+            "authid": "57195681584",
+            "authname": "Benjumea E.",
+            "surname": "Benjumea",
+            "given-name": "Eberto",
+            "initials": "E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57117284600",
+            "authid": "57117284600",
+            "orcid": "0000-0001-9963-3657",
+            "authname": "Vargas R.",
+            "surname": "Vargas",
+            "given-name": "Raúl",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57221475394",
+            "authid": "57221475394",
+            "authname": "Quintero F.",
+            "surname": "Quintero",
+            "given-name": "Fernando",
+            "initials": "F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/35784596800",
+            "authid": "35784596800",
+            "orcid": "0000-0001-6917-7558",
+            "authname": "Juarez-Salazar R.",
+            "surname": "Juarez-Salazar",
+            "given-name": "Rigoberto",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/24329839300",
+            "authid": "24329839300",
+            "orcid": "0000-0003-2413-7645",
+            "authname": "Marrugo A.G.",
+            "surname": "Marrugo",
+            "given-name": "Andres G.",
+            "initials": "A.G."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105008430466",
+        "dc:title": "Optimizing treatment to control LDL cholesterol using machine learning",
+        "prism:publicationName": "Computers in Biology and Medicine",
+        "prism:volume": "195",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-09-01",
+        "prism:doi": "10.1016/j.compbiomed.2025.110599",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59952122700",
+            "authid": "59952122700",
+            "orcid": "0000-0002-8855-2285",
+            "authname": "Yepez D.B.",
+            "surname": "Yepez",
+            "given-name": "Deiby Boneu",
+            "initials": "D.B."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57191333650",
+            "authid": "57191333650",
+            "orcid": "0000-0003-3461-1347",
+            "authname": "Porta D.S.",
+            "surname": "Porta",
+            "given-name": "David Sierra",
+            "initials": "D.S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59952159100",
+            "authid": "59952159100",
+            "authname": "Aguas L.M.",
+            "surname": "Aguas",
+            "given-name": "Liz Morales",
+            "initials": "L.M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57488328300",
+            "authid": "57488328300",
+            "authname": "Jattin F.M.",
+            "surname": "Jattin",
+            "given-name": "Fernando Manzur",
+            "initials": "F.M."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105014344453",
+        "dc:title": "Application of Risk Management in Applied Engineering Projects in a Petrochemical Plant Producing Polyvinyl Chloride in Cartagena, Colombia",
+        "prism:publicationName": "Chemengineering",
+        "prism:volume": "9",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-08-01",
+        "prism:doi": "10.3390/chemengineering9040075",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60074688200",
+            "authid": "60074688200",
+            "authname": "Bustamante Visbal J.P.",
+            "surname": "Bustamante Visbal",
+            "given-name": "Juan Pablo",
+            "initials": "J.P."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59662798800",
+            "authid": "59662798800",
+            "orcid": "0000-0003-0815-5317",
+            "authname": "Ortega-Toro R.",
+            "surname": "Ortega-Toro",
+            "given-name": "Rodrigo",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57210432772",
+            "authid": "57210432772",
+            "orcid": "0000-0002-2330-8580",
+            "authname": "Hernández Fernández J.A.",
+            "surname": "Hernández Fernández",
+            "given-name": "Joaquín Alejandro",
+            "initials": "J.A."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105002153102",
+        "dc:title": "Phase feedback fringe projection profilometry for shiny objects",
+        "prism:publicationName": "Optics and Lasers in Engineering",
+        "prism:volume": "191",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-08-01",
+        "prism:doi": "10.1016/j.optlaseng.2025.109013",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/35784596800",
+            "authid": "35784596800",
+            "orcid": "0000-0001-6917-7558",
+            "authname": "Juarez-Salazar R.",
+            "surname": "Juarez-Salazar",
+            "given-name": "Rigoberto",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55571476800",
+            "authid": "55571476800",
+            "orcid": "0000-0001-9982-0823",
+            "authname": "Vega F.",
+            "surname": "Vega",
+            "given-name": "Fabio",
+            "initials": "F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57315334200",
+            "authid": "57315334200",
+            "authname": "Esquivel-Hernandez S.",
+            "surname": "Esquivel-Hernandez",
+            "given-name": "Sofia",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/8855846100",
+            "authid": "8855846100",
+            "authname": "Diaz-Ramirez V.H.",
+            "surname": "Diaz-Ramirez",
+            "given-name": "Victor H.",
+            "initials": "V.H."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/24329839300",
+            "authid": "24329839300",
+            "authname": "Marrugo A.G.",
+            "surname": "Marrugo",
+            "given-name": "Andres G.",
+            "initials": "A.G."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105011838057",
+        "dc:title": "Geomagnetic disturbances and grid vulnerability: Correlating storm intensity with power system failures",
+        "prism:publicationName": "Plos One",
+        "prism:volume": "20",
+        "prism:issueIdentifier": "7 July",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-07-01",
+        "prism:doi": "10.1371/journal.pone.0327716",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60016883200",
+            "authid": "60016883200",
+            "orcid": "0009-0005-9072-2860",
+            "authname": "Figueroa M.G.",
+            "surname": "Figueroa",
+            "given-name": "Mauro González",
+            "initials": "M.G."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58544189400",
+            "authid": "58544189400",
+            "orcid": "0000-0002-2060-7040",
+            "authname": "Acevedo D.D.H.",
+            "surname": "Acevedo",
+            "given-name": "Daniel David Herrera",
+            "initials": "D.D.H."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57191333650",
+            "authid": "57191333650",
+            "orcid": "0000-0003-3461-1347",
+            "authname": "Porta D.S.",
+            "surname": "Porta",
+            "given-name": "David Sierra",
+            "initials": "D.S."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105014804906",
+        "dc:title": "The significance of clean energy, education, and environmental management in fostering a sustainable future",
+        "prism:publicationName": "Global Journal of Environmental Science and Management",
+        "prism:volume": "11",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "1001-1018",
+        "prism:coverDate": "2025-07-01",
+        "prism:doi": "10.22034/gjesm.2025.03.08",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57353034200",
+            "authid": "57353034200",
+            "orcid": "0000-0003-1924-8666",
+            "authname": "Villegas J.F.",
+            "surname": "Villegas",
+            "given-name": "J. Fábregas",
+            "initials": "J.F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60081695800",
+            "authid": "60081695800",
+            "orcid": "0000-0003-4947-5659",
+            "authname": "Díaz A.P.",
+            "surname": "Díaz",
+            "given-name": "A. Palencia",
+            "initials": "A.P."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105010776140",
+        "dc:title": "COMPARATIVE ANALYSIS OF THE IMPACT OF CULTURAL AND CREATIVE INDUSTRIES ON GDP AND EMPLOYMENT: A CASE STUDY OF GERMANY AND SPAIN",
+        "prism:publicationName": "Revista De Economia Institucional",
+        "prism:volume": "27",
+        "prism:issueIdentifier": "53",
+        "prism:pageRange": "297-337",
+        "prism:coverDate": "2025-07-01",
+        "prism:doi": "10.18601/01245996.v27n53.12",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59998877700",
+            "authid": "59998877700",
+            "orcid": "0000-0001-7059-8886",
+            "authname": "Gómez-Reyes F.M.",
+            "surname": "Gómez-Reyes",
+            "given-name": "Flor Marleny",
+            "initials": "F.M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57217227781",
+            "authid": "57217227781",
+            "orcid": "0000-0001-5042-0239",
+            "authname": "Catalá-Pérez D.",
+            "surname": "Catalá-Pérez",
+            "given-name": "Daniel",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59998979600",
+            "authid": "59998979600",
+            "orcid": "0000-0003-4264-8000",
+            "authname": "Miguel-Molina M.D.",
+            "surname": "Miguel-Molina",
+            "given-name": "María De",
+            "initials": "M.D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58906104700",
+            "authid": "58906104700",
+            "orcid": "0000-0003-4802-3730",
+            "authname": "Manrique-Hernández J.",
+            "surname": "Manrique-Hernández",
+            "given-name": "Johanna",
+            "initials": "J."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105011414100",
+        "dc:title": "Theoretical DFT Analysis of a Polyacrylamide/Amylose Copolymer for the Removal of Cd(II), Hg(II), and Pb(II) from Aqueous Solutions",
+        "prism:publicationName": "Polymers",
+        "prism:volume": "17",
+        "prism:issueIdentifier": "14",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-07-01",
+        "prism:doi": "10.3390/polym17141943",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57210432772",
+            "authid": "57210432772",
+            "orcid": "0000-0002-2330-8580",
+            "authname": "Hernandez-Fernandez J.",
+            "surname": "Hernandez-Fernandez",
+            "given-name": "Joaquin",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/60010866100",
+            "authid": "60010866100",
+            "orcid": "0009-0009-1091-8927",
+            "authname": "Maldonado-Morales Y.",
+            "surname": "Maldonado-Morales",
+            "given-name": "Yuly",
+            "initials": "Y."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/54408255900",
+            "authid": "54408255900",
+            "orcid": "0000-0002-2674-2876",
+            "authname": "Gonzalez-Cuello R.",
+            "surname": "Gonzalez-Cuello",
+            "given-name": "Rafael",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57207986157",
+            "authid": "57207986157",
+            "orcid": "0000-0001-8488-1076",
+            "authname": "Villabona-Ortíz Á.",
+            "surname": "Villabona-Ortíz",
+            "given-name": "Ángel",
+            "initials": "Á."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59662798800",
+            "authid": "59662798800",
+            "orcid": "0000-0003-0815-5317",
+            "authname": "Ortega-Toro R.",
+            "surname": "Ortega-Toro",
+            "given-name": "Rodrigo",
+            "initials": "R."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105010313315",
+        "dc:title": "Simulation and Optimisation Using a Digital Twin for Resilience-Based Management of Confined Aquifers",
+        "prism:publicationName": "Water Switzerland",
+        "prism:volume": "17",
+        "prism:issueIdentifier": "13",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-07-01",
+        "prism:doi": "10.3390/w17131973",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57203340249",
+            "authid": "57203340249",
+            "orcid": "0000-0002-3005-5075",
+            "authname": "Cohen-Manrique C.S.",
+            "surname": "Cohen-Manrique",
+            "given-name": "Carlos Segundo",
+            "initials": "C.S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59985633600",
+            "authid": "59985633600",
+            "orcid": "0000-0002-9237-5904",
+            "authname": "Villa-Ramírez J.L.",
+            "surname": "Villa-Ramírez",
+            "given-name": "José Luis",
+            "initials": "J.L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/36974988200",
+            "authid": "36974988200",
+            "orcid": "0000-0002-5996-9997",
+            "authname": "Camacho-León S.",
+            "surname": "Camacho-León",
+            "given-name": "Sergio",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57156565000",
+            "authid": "57156565000",
+            "orcid": "0000-0002-4867-1837",
+            "authname": "Solano-Correa Y.T.",
+            "surname": "Solano-Correa",
+            "given-name": "Yady Tatiana",
+            "initials": "Y.T."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59300326000",
+            "authid": "59300326000",
+            "authname": "Alvarez-Month A.A.",
+            "surname": "Alvarez-Month",
+            "given-name": "Alex A.",
+            "initials": "A.A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57193337460",
+            "authid": "57193337460",
+            "orcid": "0000-0002-6574-0857",
+            "authname": "Coronado-Hernández O.E.",
+            "surname": "Coronado-Hernández",
+            "given-name": "Oscar E.",
+            "initials": "O.E."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105004579978",
+        "dc:title": "Understanding perceived COVID-19 changes, collectivism, and social exclusion: A cross-cultural study in 32 countries",
+        "prism:publicationName": "International Journal of Intercultural Relations",
+        "prism:volume": "107",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-07-01",
+        "prism:doi": "10.1016/j.ijintrel.2025.102198",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57195236534",
+            "authid": "57195236534",
+            "authname": "Zhou X.",
+            "surname": "Zhou",
+            "given-name": "Xiaoyu",
+            "initials": "X."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58259909800",
+            "authid": "58259909800",
+            "authname": "English A.S.",
+            "surname": "English",
+            "given-name": "Alexander Scott",
+            "initials": "A.S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57102348200",
+            "authid": "57102348200",
+            "authname": "Wei L.",
+            "surname": "Wei",
+            "given-name": "Liuqing",
+            "initials": "L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57205476015",
+            "authid": "57205476015",
+            "authname": "Yudiarso A.",
+            "surname": "Yudiarso",
+            "given-name": "Ananta",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57223298310",
+            "authid": "57223298310",
+            "authname": "Dash A.",
+            "surname": "Dash",
+            "given-name": "Arobindu",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/54400398100",
+            "authid": "54400398100",
+            "authname": "Tipandjan A.",
+            "surname": "Tipandjan",
+            "given-name": "Arun",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57191342962",
+            "authid": "57191342962",
+            "authname": "Biddle A.",
+            "surname": "Biddle",
+            "given-name": "Ashley",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "8",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57193792731",
+            "authid": "57193792731",
+            "orcid": "0000-0001-9969-4783",
+            "authname": "Nam B.H.",
+            "surname": "Nam",
+            "given-name": "Benjamin H.",
+            "initials": "B.H."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "9",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57205351102",
+            "authid": "57205351102",
+            "authname": "Boonroungrut C.",
+            "surname": "Boonroungrut",
+            "given-name": "Chinun",
+            "initials": "C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "10",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57190784195",
+            "authid": "57190784195",
+            "authname": "Chettiar C.",
+            "surname": "Chettiar",
+            "given-name": "Cicilia",
+            "initials": "C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "11",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59798925100",
+            "authid": "59798925100",
+            "authname": "Daniele P.",
+            "surname": "Daniele",
+            "given-name": "Paolini",
+            "initials": "P."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "12",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57191706812",
+            "authid": "57191706812",
+            "authname": "Dubrov D.",
+            "surname": "Dubrov",
+            "given-name": "Dmitrii",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "13",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57191706675",
+            "authid": "57191706675",
+            "authname": "Grigoryev D.",
+            "surname": "Grigoryev",
+            "given-name": "Dmitry",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "14",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57211487182",
+            "authid": "57211487182",
+            "authname": "Šakan D.",
+            "surname": "Šakan",
+            "given-name": "Dušana",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "15",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58090941900",
+            "authid": "58090941900",
+            "authname": "Oliver E.",
+            "surname": "Oliver",
+            "given-name": "Eliza",
+            "initials": "E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "16",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893530600",
+            "authid": "58893530600",
+            "authname": "Medosevic - Korjenic E.",
+            "surname": "Medosevic - Korjenic",
+            "given-name": "Elma",
+            "initials": "E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "17",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59803495800",
+            "authid": "59803495800",
+            "authname": "Fabricio Licoa Campos A.",
+            "surname": "Fabricio Licoa Campos",
+            "given-name": "Adolfo",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "18",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55887532200",
+            "authid": "55887532200",
+            "authname": "Novaes F.",
+            "surname": "Novaes",
+            "given-name": "Felipe",
+            "initials": "F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "19",
+            "author-url": "https://api.elsevier.com/content/author/author_id/14065134800",
+            "authid": "14065134800",
+            "authname": "Maricchiolo F.",
+            "surname": "Maricchiolo",
+            "given-name": "Fridanna",
+            "initials": "F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "20",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57192437355",
+            "authid": "57192437355",
+            "authname": "Navarro-Carrillo G.",
+            "surname": "Navarro-Carrillo",
+            "given-name": "Ginés",
+            "initials": "G."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "21",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57212021331",
+            "authid": "57212021331",
+            "authname": "Belen H.",
+            "surname": "Belen",
+            "given-name": "Hacer",
+            "initials": "H."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "22",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893541500",
+            "authid": "58893541500",
+            "authname": "Gunawan H.",
+            "surname": "Gunawan",
+            "given-name": "Hendrik",
+            "initials": "H."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "23",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58691478300",
+            "authid": "58691478300",
+            "authname": "Jiang H.",
+            "surname": "Jiang",
+            "given-name": "Huang",
+            "initials": "H."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "24",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55178043500",
+            "authid": "55178043500",
+            "authname": "Hofhuis J.",
+            "surname": "Hofhuis",
+            "given-name": "Joep",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "25",
+            "author-url": "https://api.elsevier.com/content/author/author_id/54901008200",
+            "authid": "54901008200",
+            "authname": "Kunst J.R.",
+            "surname": "Kunst",
+            "given-name": "Jonas R.",
+            "initials": "J.R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "26",
+            "author-url": "https://api.elsevier.com/content/author/author_id/35109553100",
+            "authid": "35109553100",
+            "authname": "Park J.",
+            "surname": "Park",
+            "given-name": "Joonha",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "27",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893551800",
+            "authid": "58893551800",
+            "authname": "Neto J.C.P.",
+            "surname": "Neto",
+            "given-name": "Jose Candido Pereira",
+            "initials": "J.C.P."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "28",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893557400",
+            "authid": "58893557400",
+            "authname": "Huang K.",
+            "surname": "Huang",
+            "given-name": "Kaiyue",
+            "initials": "K."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "29",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59803495900",
+            "authid": "59803495900",
+            "authname": "Addington-Lefringhausen K.",
+            "surname": "Addington-Lefringhausen",
+            "given-name": "Katharina",
+            "initials": "K."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "30",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56389341900",
+            "authid": "56389341900",
+            "authname": "Hossain K.N.",
+            "surname": "Hossain",
+            "given-name": "Kazi Nur",
+            "initials": "K.N."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "31",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57039103600",
+            "authid": "57039103600",
+            "authname": "Martínez-Buelvas L.",
+            "surname": "Martínez-Buelvas",
+            "given-name": "Laura",
+            "initials": "L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "32",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893546700",
+            "authid": "58893546700",
+            "authname": "Yousefi M.",
+            "surname": "Yousefi",
+            "given-name": "Mahdi",
+            "initials": "M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "33",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7005834021",
+            "authid": "7005834021",
+            "authname": "Yuki M.",
+            "surname": "Yuki",
+            "given-name": "Masaki",
+            "initials": "M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "34",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893530500",
+            "authid": "58893530500",
+            "authname": "F. Falavarjani M.",
+            "surname": "F. Falavarjani",
+            "given-name": "Mehrdad",
+            "initials": "M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "35",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57194396919",
+            "authid": "57194396919",
+            "authname": "Schwarzenthal M.",
+            "surname": "Schwarzenthal",
+            "given-name": "Miriam",
+            "initials": "M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "36",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57551069800",
+            "authid": "57551069800",
+            "authname": "Klimek-Tulwin M.",
+            "surname": "Klimek-Tulwin",
+            "given-name": "Monika",
+            "initials": "M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "37",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56902534500",
+            "authid": "56902534500",
+            "authname": "Kosakowska-Berezecka N.",
+            "surname": "Kosakowska-Berezecka",
+            "given-name": "Natasza",
+            "initials": "N."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "38",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7801567349",
+            "authid": "7801567349",
+            "authname": "Geeraert N.",
+            "surname": "Geeraert",
+            "given-name": "Nicolas",
+            "initials": "N."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "39",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58566378600",
+            "authid": "58566378600",
+            "authname": "Khieowan N.",
+            "surname": "Khieowan",
+            "given-name": "Nuannut",
+            "initials": "N."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "40",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55521697500",
+            "authid": "55521697500",
+            "authname": "Chobthamkit P.",
+            "surname": "Chobthamkit",
+            "given-name": "Phatthanakit",
+            "initials": "P."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "41",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57211678180",
+            "authid": "57211678180",
+            "authname": "Sun Q.",
+            "surname": "Sun",
+            "given-name": "Qian",
+            "initials": "Q."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "42",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56463772700",
+            "authid": "56463772700",
+            "orcid": "0000-0002-9027-4253",
+            "authname": "Cowden R.G.",
+            "surname": "Cowden",
+            "given-name": "Richard G.",
+            "initials": "R.G."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "43",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58796770200",
+            "authid": "58796770200",
+            "authname": "Castro R.",
+            "surname": "Castro",
+            "given-name": "Rita",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "44",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56312670900",
+            "authid": "56312670900",
+            "authname": "Thomson R.",
+            "surname": "Thomson",
+            "given-name": "Robert",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "45",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57219872055",
+            "authid": "57219872055",
+            "authname": "Tong R.",
+            "surname": "Tong",
+            "given-name": "Rongtian",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "46",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56559232500",
+            "authid": "56559232500",
+            "authname": "Malik S.",
+            "surname": "Malik",
+            "given-name": "Sadia",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "47",
+            "author-url": "https://api.elsevier.com/content/author/author_id/24476452000",
+            "authid": "24476452000",
+            "authname": "Lins S.",
+            "surname": "Lins",
+            "given-name": "Samuel",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "48",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58725672700",
+            "authid": "58725672700",
+            "authname": "Batić Očovaj S.",
+            "surname": "Batić Očovaj",
+            "given-name": "Sanja",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "49",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57812762100",
+            "authid": "57812762100",
+            "authname": "Wang S.",
+            "surname": "Wang",
+            "given-name": "Shuang",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "50",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57213327593",
+            "authid": "57213327593",
+            "authname": "Aquino S.D.",
+            "surname": "Aquino",
+            "given-name": "Sibele D.",
+            "initials": "S.D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "51",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55376561400",
+            "authid": "55376561400",
+            "authname": "Kulich S.",
+            "surname": "Kulich",
+            "given-name": "Steve",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "52",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57202741175",
+            "authid": "57202741175",
+            "authname": "Farid T.",
+            "surname": "Farid",
+            "given-name": "Tahir",
+            "initials": "T."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "53",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58893541300",
+            "authid": "58893541300",
+            "authname": "Alves T.",
+            "surname": "Alves",
+            "given-name": "Tales",
+            "initials": "T."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "54",
+            "author-url": "https://api.elsevier.com/content/author/author_id/39062216700",
+            "authid": "39062216700",
+            "authname": "Talhelm T.",
+            "surname": "Talhelm",
+            "given-name": "Thomas",
+            "initials": "T."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "55",
+            "author-url": "https://api.elsevier.com/content/author/author_id/35784412400",
+            "authid": "35784412400",
+            "authname": "Jovanović V.",
+            "surname": "Jovanović",
+            "given-name": "Veljko",
+            "initials": "V."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "56",
+            "author-url": "https://api.elsevier.com/content/author/author_id/36603731100",
+            "authid": "36603731100",
+            "authname": "Yeung V.W.L.",
+            "surname": "Yeung",
+            "given-name": "Victoria Wai Lan",
+            "initials": "V.W.L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "57",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57327423400",
+            "authid": "57327423400",
+            "authname": "Li X.",
+            "surname": "Li",
+            "given-name": "Xiaoyuan",
+            "initials": "X."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "58",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57250485800",
+            "authid": "57250485800",
+            "authname": "Zhang X.",
+            "surname": "Zhang",
+            "given-name": "Xinyi",
+            "initials": "X."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105008114776",
+        "dc:title": "Tourism Competitiveness in Colombia. A study by cities",
+        "prism:publicationName": "Revista Venezolana De Gerencia",
+        "prism:volume": "30",
+        "prism:issueIdentifier": "111",
+        "prism:pageRange": "1632-1647",
+        "prism:coverDate": "2025-06-04",
+        "prism:doi": "10.52080/rvgluz.30.111.24",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58521581000",
+            "authid": "58521581000",
+            "orcid": "0000-0002-3799-9642",
+            "authname": "Milena P.P.C.",
+            "surname": "Milena",
+            "given-name": "Pérez Peralta Claudia",
+            "initials": "P.P.C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59945411600",
+            "authid": "59945411600",
+            "orcid": "0000-0002-2392-6880",
+            "authname": "Rafael A.N.A.",
+            "surname": "Rafael",
+            "given-name": "Anaya Narváez Alfredo",
+            "initials": "A.N.A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59944550100",
+            "authid": "59944550100",
+            "orcid": "0000-0003-0471-9859",
+            "authname": "Del Valle C.A.Y.",
+            "surname": "Del Valle",
+            "given-name": "Chirinos Araque Yamarú",
+            "initials": "C.A.Y."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105010266217",
+        "dc:title": "DRIVING THE DEVELOPMENT OF ENERGY COMMUNITIES IN COLOMBIA: CHALLENGES AND OPPORTUNITIES FOR A DECENTRALIZED ENERGY TRANSITION",
+        "prism:publicationName": "Habitat Sustentable",
+        "prism:volume": "15",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": "10-19",
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.22320/07190700.2025.15.01.01",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57221229836",
+            "authid": "57221229836",
+            "orcid": "0000-0003-1895-0859",
+            "authname": "Medina-Reyes M.F.",
+            "surname": "Medina-Reyes",
+            "given-name": "María Fernanda",
+            "initials": "M.F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56581610900",
+            "authid": "56581610900",
+            "orcid": "0000-0002-5675-7796",
+            "authname": "Fajardo-Cuadro J.G.",
+            "surname": "Fajardo-Cuadro",
+            "given-name": "Juan Gabriel",
+            "initials": "J.G."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+            "authid": "26325154200",
+            "orcid": "0000-0003-2755-0718",
+            "authname": "Martínez-Santos J.C.",
+            "surname": "Martínez-Santos",
+            "given-name": "Juan Carlos",
+            "initials": "J.C."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105009263283",
+        "dc:title": "Assessment of Baseflow Separation Methods Used in the Estimations of Design-Related Storm Hydrographs Across Various Return Periods",
+        "prism:publicationName": "Hydrology",
+        "prism:volume": "12",
+        "prism:issueIdentifier": "6",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.3390/hydrology12060158",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57193337460",
+            "authid": "57193337460",
+            "orcid": "0000-0002-6574-0857",
+            "authname": "Coronado-Hernández O.E.",
+            "surname": "Coronado-Hernández",
+            "given-name": "Oscar E.",
+            "initials": "O.E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57903699900",
+            "authid": "57903699900",
+            "authname": "Méndez-Anillo R.D.",
+            "surname": "Méndez-Anillo",
+            "given-name": "Rafael D.",
+            "initials": "R.D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57200521421",
+            "authid": "57200521421",
+            "orcid": "0000-0003-1345-9657",
+            "authname": "Saba M.",
+            "surname": "Saba",
+            "given-name": "Manuel",
+            "initials": "M."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105004180695",
+        "dc:title": "Robot swarm aggregation using an improved Beeclust method",
+        "prism:publicationName": "International Journal of Intelligent Robotics and Applications",
+        "prism:volume": "9",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "804-814",
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.1007/s41315-025-00442-6",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57204642964",
+            "authid": "57204642964",
+            "authname": "Rios Y.Y.",
+            "surname": "Rios",
+            "given-name": "Y. Yuliana",
+            "initials": "Y.Y."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57197327858",
+            "authid": "57197327858",
+            "authname": "Acevedo O.",
+            "surname": "Acevedo",
+            "given-name": "Oscar",
+            "initials": "O."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58399544800",
+            "authid": "58399544800",
+            "authname": "García L.L.",
+            "surname": "García",
+            "given-name": "Luis Luis",
+            "initials": "L.L."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105007728920",
+        "dc:title": "An Analytical Model for the Prediction of Emptying Processes in Single Water Pipelines",
+        "prism:publicationName": "Applied Sciences Switzerland",
+        "prism:volume": "15",
+        "prism:issueIdentifier": "11",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.3390/app15116000",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57219506381",
+            "authid": "57219506381",
+            "authname": "Payares Guevara C.R.",
+            "surname": "Payares Guevara",
+            "given-name": "Carlos R.",
+            "initials": "C.R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57190688459",
+            "authid": "57190688459",
+            "orcid": "0000-0001-5783-192X",
+            "authname": "Patiño-Vanegas A.",
+            "surname": "Patiño-Vanegas",
+            "given-name": "Alberto",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57189892062",
+            "authid": "57189892062",
+            "authname": "Pereira-Batista E.",
+            "surname": "Pereira-Batista",
+            "given-name": "Enrique",
+            "initials": "E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57193337460",
+            "authid": "57193337460",
+            "orcid": "0000-0002-6574-0857",
+            "authname": "Coronado-Hernández O.E.",
+            "surname": "Coronado-Hernández",
+            "given-name": "Oscar E.",
+            "initials": "O.E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/6507312882",
+            "authid": "6507312882",
+            "orcid": "0000-0003-3524-2555",
+            "authname": "Fuertes-Miquel V.S.",
+            "surname": "Fuertes-Miquel",
+            "given-name": "Vicente S.",
+            "initials": "V.S."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85184473223",
+        "dc:title": "Density of the Level Sets of the Metric Mean Dimension for Homeomorphisms",
+        "prism:publicationName": "Journal of Dynamics and Differential Equations",
+        "prism:volume": "37",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "1965-1978",
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.1007/s10884-023-10344-5",
+        "citedby-count": "1",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57350116000",
+            "authid": "57350116000",
+            "authname": "Acevedo J.M.",
+            "surname": "Acevedo",
+            "given-name": "Jeovanny M.",
+            "initials": "J.M."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57217530823",
+            "authid": "57217530823",
+            "authname": "Romaña S.",
+            "surname": "Romaña",
+            "given-name": "Sergio",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58032467600",
+            "authid": "58032467600",
+            "authname": "Arias R.",
+            "surname": "Arias",
+            "given-name": "Raibel",
+            "initials": "R."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105009024472",
+        "dc:title": "Integrating Socio-Demographic and Local Sustainability Indicators: Implications for Urban Health and Children’s Vulnerability in Henequén Neighborhood in Cartagena, Colombia",
+        "prism:publicationName": "Urban Science",
+        "prism:volume": "9",
+        "prism:issueIdentifier": "6",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.3390/urbansci9060220",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/55929356800",
+            "authid": "55929356800",
+            "orcid": "0000-0003-2185-7882",
+            "authname": "Tirado-Ballestas I.P.",
+            "surname": "Tirado-Ballestas",
+            "given-name": "Irina P.",
+            "initials": "I.P."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57200334980",
+            "authid": "57200334980",
+            "orcid": "0000-0002-8462-1124",
+            "authname": "Gallego J.L.",
+            "surname": "Gallego",
+            "given-name": "Jorge L.",
+            "initials": "J.L."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57216439951",
+            "authid": "57216439951",
+            "orcid": "0000-0002-7245-8761",
+            "authname": "Zuluaga-Ortiz R.",
+            "surname": "Zuluaga-Ortiz",
+            "given-name": "Rohemi",
+            "initials": "R."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59961256200",
+            "authid": "59961256200",
+            "authname": "Roa-Pérez V.",
+            "surname": "Roa-Pérez",
+            "given-name": "Vladimir",
+            "initials": "V."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57204024256",
+            "authid": "57204024256",
+            "authname": "Silva-Cortés A.",
+            "surname": "Silva-Cortés",
+            "given-name": "Alejandro",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57205604398",
+            "authid": "57205604398",
+            "authname": "Sarmiento M.C.",
+            "surname": "Sarmiento",
+            "given-name": "María C.",
+            "initials": "M.C."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57220073247",
+            "authid": "57220073247",
+            "orcid": "0000-0003-2531-6389",
+            "authname": "De la Hoz-Domínguez E.J.",
+            "surname": "De la Hoz-Domínguez",
+            "given-name": "Enrique J.",
+            "initials": "E.J."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/86000303183",
+        "dc:title": "Use of a 416B-type central-hybrid experimental design to evaluate the synthesis conditions of TiO2/biochar composites on the solid-state photocatalytic degradation of polypropylene-plastic films",
+        "prism:publicationName": "Applied Catalysis A General",
+        "prism:volume": "697",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-05-05",
+        "prism:doi": "10.1016/j.apcata.2025.120196",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57024211000",
+            "authid": "57024211000",
+            "authname": "Castilla-Caballero D.",
+            "surname": "Castilla-Caballero",
+            "given-name": "Deyler",
+            "initials": "D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59674123400",
+            "authid": "59674123400",
+            "authname": "Medina-Guerrero A.",
+            "surname": "Medina-Guerrero",
+            "given-name": "Astrid",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57199644727",
+            "authid": "57199644727",
+            "authname": "Hernandez-Ramirez A.",
+            "surname": "Hernandez-Ramirez",
+            "given-name": "Aracely",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56000886200",
+            "authid": "56000886200",
+            "authname": "Vazquez-Rodriguez S.",
+            "surname": "Vazquez-Rodriguez",
+            "given-name": "Sofia",
+            "initials": "S."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/23484999200",
+            "authid": "23484999200",
+            "authname": "Colina-Márquez J.",
+            "surname": "Colina-Márquez",
+            "given-name": "José",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "6",
+            "author-url": "https://api.elsevier.com/content/author/author_id/35488117500",
+            "authid": "35488117500",
+            "authname": "Machuca Martínez F.",
+            "surname": "Machuca Martínez",
+            "given-name": "Fiderman",
+            "initials": "F."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "7",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57204866197",
+            "authid": "57204866197",
+            "authname": "Barraza-Burgos J.",
+            "surname": "Barraza-Burgos",
+            "given-name": "Juan",
+            "initials": "J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "8",
+            "author-url": "https://api.elsevier.com/content/author/author_id/6506275757",
+            "authid": "6506275757",
+            "authname": "Roa-Espinosa A.",
+            "surname": "Roa-Espinosa",
+            "given-name": "Aicardo",
+            "initials": "A."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "9",
+            "author-url": "https://api.elsevier.com/content/author/author_id/7101998337",
+            "authid": "7101998337",
+            "authname": "Gunasekaran S.",
+            "surname": "Gunasekaran",
+            "given-name": "Sundaram",
+            "initials": "S."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105006705355",
+        "dc:title": "Effect of Starch Variety and Environmental Conditions on the Aerobic Biodegradation of Citric Acid-Compatibilized Thermoplastic Starch/Polylactic Acid Blends",
+        "prism:publicationName": "Polymers",
+        "prism:volume": "17",
+        "prism:issueIdentifier": "10",
+        "prism:pageRange": null,
+        "prism:coverDate": "2025-05-01",
+        "prism:doi": "10.3390/polym17101295",
+        "citedby-count": "0",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/59919102900",
+            "authid": "59919102900",
+            "authname": "Moreno-Bohorquez E.",
+            "surname": "Moreno-Bohorquez",
+            "given-name": "Elizabeth",
+            "initials": "E."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "2",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57219403758",
+            "authid": "57219403758",
+            "authname": "Arias-Tapia M.J.",
+            "surname": "Arias-Tapia",
+            "given-name": "Mary Judith",
+            "initials": "M.J."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "3",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57219398941",
+            "authid": "57219398941",
+            "orcid": "0000-0003-1748-5721",
+            "authname": "Martínez-Villadiego K.",
+            "surname": "Martínez-Villadiego",
+            "given-name": "Keydis",
+            "initials": "K."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "4",
+            "author-url": "https://api.elsevier.com/content/author/author_id/58181121400",
+            "authid": "58181121400",
+            "orcid": "0000-0002-8975-8584",
+            "authname": "Rhenals-Julio J.D.",
+            "surname": "Rhenals-Julio",
+            "given-name": "Jesús D.",
+            "initials": "J.D."
+          },
+          {
+            "@_fa": "true",
+            "@seq": "5",
+            "author-url": "https://api.elsevier.com/content/author/author_id/56927920300",
+            "authid": "56927920300",
+            "orcid": "0000-0002-0466-8353",
+            "authname": "Jaramillo A.F.",
+            "surname": "Jaramillo",
+            "given-name": "Andrés F.",
+            "initials": "A.F."
+          }
+        ]
+      },
+      {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105002746333",
+        "dc:title": "Guidance for generative AI in education and research. A critical review",
+        "prism:publicationName": "Educacion Matematica",
+        "prism:volume": "37",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": "241-242",
+        "prism:coverDate": "2025-04-01",
+        "prism:doi": "10.24844/EM3701.09",
+        "citedby-count": "0",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "author": [
+          {
+            "@_fa": "true",
+            "@seq": "1",
+            "author-url": "https://api.elsevier.com/content/author/author_id/57193012270",
+            "authid": "57193012270",
+            "orcid": "0000-0001-6391-3147",
+            "authname": "Prettel M.G.",
+            "surname": "Prettel",
+            "given-name": "Miguel Garcés",
+            "initials": "M.G."
+          }
+        ]
+      }
+    ]
+  }
+}
