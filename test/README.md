@@ -54,7 +54,7 @@ test/
 ## Notas
 
 - **ElsClient** y **ElsSearch**: basadas en **Elsapy**.
-  `Elsapy (GitHub): [Elsapy](https://github.com/ElsevierDev/elsapy/tree/master)`
+  `Elsapy (GitHub):` [Elsapy](https://github.com/ElsevierDev/elsapy/tree/master)
 - **ElsJson**: implementación propia enfocada en limpieza/estandarización de la respuesta JSON.
 - Las notebooks están orientadas a pruebas exploratorias, validación de contrato y documentación viva del comportamiento.
 
