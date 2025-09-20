@@ -6,11 +6,11 @@ Este directorio contiene **pruebas unitarias y exploratorias** para tres clases 
 
 ```
 test/
-├─ pruebas/
-│  ├─ ElsClient - API.ipynb     # Pruebas de la clase ElsClient (basada en Elsapy)
-│  ├─ ElsJson - API.ipynb       # Pruebas de la clase ElsJson (autoría propia)
-│  ├─ ElsSearch - API.ipynb     # Pruebas de la clase ElsSearch (basada en Elsapy)
-│  └─ README.md                 # Este archivo (guía de las pruebas)
+│
+├─ ElsClient - API.ipynb     # Pruebas de la clase ElsClient (basada en Elsapy)
+├─ ElsJson - API.ipynb       # Pruebas de la clase ElsJson (autoría propia)
+├─ ElsSearch - API.ipynb     # Pruebas de la clase ElsSearch (basada en Elsapy)
+├─ README.md                 # Este archivo (guía de las pruebas)
 └─ scopus_results_fieldv2.json  # JSON de ejemplo para probar ElsJson
 ```
 
