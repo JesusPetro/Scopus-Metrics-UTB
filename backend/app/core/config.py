@@ -11,6 +11,22 @@ UPLOADS_DIR = DATA_DIR / "upload"
 PROCESSED_DIR = DATA_DIR / "processed"
 
 
+# ======== Fields =========
+
+FIELDS = {
+    'authors_info': 'Authors',
+    'authors_info_with_id': 'Author full names',
+    'authors_id': 'Author(s) ID',
+    'dc:title': 'Title',
+    'prism:coverDate': 'Date',
+    'prism:volume': 'Volume',
+    'prism:issueIdentifier': 'Issue',
+    'citedby-count': 'Cited by',
+    'prism:doi': 'DOI',
+    'subtypeDescription': 'Document Type'
+}
+
+
 for d in [UPLOADS_DIR, PROCESSED_DIR]:
     os.makedirs(d, exist_ok=True)
 
@@ -57,8 +73,6 @@ class Loggin():
         
         for ln in logger_names:
             add_file_handle_to_logger(LOGGERS[ln], dirpath) 
-
-
 
 settings = Settings()
 loggin = Loggin()
