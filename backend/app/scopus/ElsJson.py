@@ -1,31 +1,17 @@
 
 from pathlib import Path
+from exceptions import ElsevierSchemaError
+from app.core.config import FIELDS as fields
 from typing import Any, Dict, List, Optional
 
 import json
 import pandas as pd
 import app.core.logging as log_util
+
 # from __init__ import version, log_to_directory
 
 
 logger = log_util.get_logger(__name__)
-
-fields = {
-    'authors_info': 'Authors',
-    'authors_info_with_id': 'Author full names',
-    'authors_id': 'Author(s) ID',
-    'dc:title': 'Title',
-    'prism:coverDate': 'Date',
-    'prism:volume': 'Volume',
-    'prism:issueIdentifier': 'Issue',
-    'citedby-count': 'Cited by',
-    'prism:doi': 'DOI',
-    'subtypeDescription': 'Document Type'
-}
-
-class ElsevierSchemaError(RuntimeError):
-    """It notes that the JSON response does not meet the contract expected from Elsevier/Scopus."""
-
 
 class Elsjson: 
     """
@@ -114,32 +100,61 @@ class Elsjson:
             logger.warning(
                 "Elsevier response with no results: 0 data."
             )
+        logger.info(
+            "Validateing Elsevier response with %d top-level keys.", _
+        )
 
     @staticmethod
     def preprocess_author(authors):
+        """Return a semicolon-separated string of author names."""
         return ';'.join(f'{auth["authname"]}' for auth in authors)
 
     @staticmethod
     def preprocess_author_with_id(authors):
+        """Return a semicolon-separated string of author names with IDs."""
         return ';'.join(f'{auth["authname"]} ({auth["authid"]})' for auth in authors)
     
     @staticmethod
     def preprocess_authorid(authors):
+        """Return a semicolon-separated string of author IDs."""
         return ';'.join(f'{auth["authid"]}' for auth in authors)
 
+
     def _enrich_entries(self, entries: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """
+        Enrich Scopus/Elsevier entries with preprocessed author information.
+
+        Args:
+            entries (List[Dict[str, Any]]): List of raw entries (dicts) returned by the API.
+
+        Returns:
+            List[Dict[str, Any]]: A new list of entries with additional fields:
+                - authors_id: semicolon-separated string of author IDs.
+                - authors_info: semicolon-separated string of author names.
+                - authors_info_with_id: semicolon-separated string of author names with IDs.
+        """
         enriched: List[Dict[str, Any]] = []
 
-        for e in entries: 
+        for e in entries:
+            # Extract authors list (may be empty if missing in the response)
             authors = e.get("author") or []
+
+            # Create a shallow copy of the entry to avoid mutating the original
             copy_e = dict(e)
 
+            # Add new preprocessed fields for authors
             copy_e['authors_id'] = self.preprocess_authorid(authors)
             copy_e['authors_info'] = self.preprocess_author(authors)
             copy_e['authors_info_with_id'] = self.preprocess_author_with_id(authors)
+
+            # Append enriched entry to the result list
             enriched.append(copy_e)
 
+        # Log the enrichment process
+        logger.info("Enriched entries with preprocessed author fields.")
+
         return enriched
+
 
     def to_dataframe(self) -> pd.DataFrame:
         """

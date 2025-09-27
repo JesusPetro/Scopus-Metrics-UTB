@@ -1,28 +1,33 @@
 class ScopusError(Exception):
-    """Excepción base para todos los errores relacionados con Scopus."""
+    """Base exception for all Scopus-related errors."""
     pass
 
 
 class ScopusAuthError(ScopusError):
-    """Error de autenticación (apikey o insttoken inválido)."""
-    def __init__(self, message="Error de autenticación con Elsevier API"):
+    """Authentication error (invalid API key or insttoken)."""
+    def __init__(self, message: str = "Authentication error with Elsevier API"):
         super().__init__(message)
 
 
 class ScopusConnectionError(ScopusError):
-    """Error de conexión HTTP con Elsevier API."""
-    def __init__(self, message="No se pudo conectar con Elsevier API"):
+    """HTTP connection error with Elsevier API."""
+    def __init__(self, message: str = "Could not connect to Elsevier API"):
         super().__init__(message)
 
 
 class ScopusRateLimitError(ScopusError):
-    """Cuando Elsevier responde con demasiadas peticiones (HTTP 429)."""
-    def __init__(self, message="Se alcanzó el límite de peticiones a Elsevier API"):
+    """Too many requests sent to Elsevier API (HTTP 429)."""
+    def __init__(self, message: str = "Rate limit reached for Elsevier API"):
         super().__init__(message)
 
 
 class ScopusResponseError(ScopusError):
-    """Cuando la respuesta de Elsevier es inválida o inesperada."""
-    def __init__(self, status_code: int, detail: str = "Respuesta inválida de Elsevier"):
+    """Invalid or unexpected response from Elsevier API."""
+    def __init__(self, status_code: int, detail: str = "Invalid response from Elsevier"):
         self.status_code = status_code
         super().__init__(f"{detail} (HTTP {status_code})")
+
+
+class ElsevierSchemaError(RuntimeError):
+    """Indicates that the JSON response does not match the expected Elsevier/Scopus schema."""
+    pass

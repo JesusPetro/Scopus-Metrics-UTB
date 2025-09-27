@@ -3,14 +3,11 @@ import app.core.logging as log_util
 
 from pathlib import Path
 from ElsClient import ElsClient
-# from dotenv import load_dotenv
-# from app.core.config import loggin
 from typing import Any, Dict, List, Optional
 
 
 logger = log_util.get_logger(__name__)
-# loggin.log_to_directory("logs")
-# load_dotenv()
+
 
 
 class Elsearch():
@@ -24,31 +21,38 @@ class Elsearch():
         
 
     @property
-    def query(self):
+    def query(self) -> Dict[str, Any]:
+        """Get the query parameters used for the request."""
         return self._query
-    
+
     @query.setter
-    def query(self, query: Dict[str, Any]): 
+    def query(self, query: Dict[str, Any]) -> None:
+        """Set the query parameters for the request."""
         self._query = query
 
     @property
-    def results(self):
+    def results(self) -> list[dict[str, Any]]:
+        """Get the API results."""
         return self._results
-    
+
     @results.setter
-    def results(self, results):
+    def results(self, results: list[dict[str, Any]]) -> None:
+        """Set the API results."""
         self._results = results
 
     @property
-    def tot_num_res(self):
+    def tot_num_res(self) -> int:
+        """Get the total number of results available (reported by API)."""
         return self._tot_num_res
-    
+
     @tot_num_res.setter
-    def tot_num_res(self, tot_num_res):
+    def tot_num_res(self, tot_num_res: int) -> None:
+        """Set the total number of results available (reported by API)."""
         self._tot_num_res = tot_num_res
-    
+
     @property
-    def num_res(self):
+    def num_res(self) -> int:
+        """Get the number of results currently stored in `results`."""
         return len(self.results)
 
     def execute(
@@ -58,6 +62,32 @@ class Elsearch():
             view = None,
     ):
 
+        """
+        Execute a Scopus/Elsevier search request and store the results.
+
+        This method sends the query to the Elsevier API, retrieves the first page 
+        of results, and optionally fetches all additional pages if `get_all` is True. 
+        Results are stored in the `results` property and the total number of results 
+        is set in `tot_num_res`.
+
+        Args:
+            els_client: The Elsevier API client instance used to execute requests.
+            get_all (bool, optional): If True, retrieve all pages of results. 
+                Defaults to False.
+            view (str, optional): API view parameter to customize the response fields. 
+                If provided, it is appended to the request URL.
+
+        Side Effects:
+            - Updates `self.results` with the list of entries.
+            - Updates `self.tot_num_res` with the reported total number of results.
+            - Writes the collected results into a local JSON file (`scopusv2.json`).
+            - Logs progress and success message.
+
+        Raises:
+            ScopusConnectionError: If an error occurs while calling the API.
+            ScopusResponseError: If the API response is invalid or unexpected.
+        """
+                
         if view: 
             url += f'&view={view}'
         

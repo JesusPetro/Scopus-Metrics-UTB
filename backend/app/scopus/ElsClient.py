@@ -90,29 +90,48 @@ class ElsClient:
         return {'status_code': self._status_code, 'status_msg': self._status_msg}
     
     def _handle_http_error(self, r: requests.Response, url: str) -> None:
+        """
+        Handle HTTP errors from the Elsevier API response.
+
+        Args:
+            r (requests.Response): The HTTP response object.
+            url (str): The request URL that produced the error.
+
+        Raises:
+            ScopusAuthError: If authentication fails (401/403).
+            ScopusRateLimitError: If the request exceeds rate limits (429).
+            ScopusConnectionError: If Elsevier server errors occur (5xx).
+            ScopusResponseError: For any other invalid or unexpected response.
+        """
         body = r.text
         status = r.status_code
         self._status_code = r.status_code
-        base_msg = f"HTTP {status} desde {url}. Respuesta: {body}"
+        base_msg = f"HTTP {status} from {url}. Response: {body}"
 
         if status in (401, 403):
-            self._status_msg = "Error de autenticación"
+            self._status_msg = "Authentication error"
             logger.error(self._status_msg + f" | {base_msg}")
-            raise ScopusAuthError("apikey o insttoken inválidos (401/403).")
+            raise ScopusAuthError("Invalid apikey or insttoken (401/403).")
+
         elif status == 429:
-            self._status_msg = "Rate limit alcanzado"
+            self._status_msg = "Rate limit reached"
             logger.warning(self._status_msg + f" | {base_msg}")
             raise ScopusRateLimitError()
-        elif 500 <= status <= 599:
-            self._status_msg = "Error de servidor Elsevier"
-            logger.error(self._status_msg + f" | {base_msg}")
-            raise ScopusConnectionError(f"Elsevier respondió {status}. Intenta reintentar más tarde.")
-        else:
-            self._status_msg = "Respuesta inválida de Elsevier"
-            logger.error(self._status_msg + f" | {base_msg}")
-            raise ScopusResponseError(status_code=status, detail="Respuesta inválida de Elsevier")
 
-    # acces functions
+        elif 500 <= status <= 599:
+            self._status_msg = "Elsevier server error"
+            logger.error(self._status_msg + f" | {base_msg}")
+            raise ScopusConnectionError(
+                f"Elsevier responded with {status}. Please try again later."
+            )
+
+        else:
+            self._status_msg = "Invalid Elsevier response"
+            logger.error(self._status_msg + f" | {base_msg}")
+            raise ScopusResponseError(
+                status_code=status, detail="Invalid response from Elsevier"
+            )
+
     def get_base_url(self):
         """Returns the ELSAPI base URL currently configured for the client"""
         return self.__url_base
@@ -145,20 +164,20 @@ class ElsClient:
             )
         except (requests.Timeout, requests.ConnectTimeout) as e:
             self._status_code = None
-            self._status_msg = "Timeout conectando a Elsevier"
+            self._status_msg = "Timeout connecting to Elsevier"
             logger.error(f"{self._status_msg}: {e}")
-            raise ScopusConnectionError("Tiempo de espera agotado al conectar con Elsevier API.")   
+            raise ScopusConnectionError("Request timed out while connecting to Elsevier API.")
         except requests.ConnectionError as e:
             self._status_code = None
-            self._status_msg = "Error de conexión"
+            self._status_msg = "Connection error"
             logger.error(f"{self._status_msg}: {e}")
-            raise ScopusConnectionError("No se pudo establecer conexión con Elsevier API.")     
+            raise ScopusConnectionError("Failed to establish connection with Elsevier API.")
         except requests.RequestException as e:
-            # Errores genéricos de requests
             self._status_code = None
-            self._status_msg = "Error de cliente HTTP"
+            self._status_msg = "HTTP client error"
             logger.error(f"{self._status_msg}: {e}")
-            raise ScopusConnectionError("Error de red al consultar Elsevier API.")
+            raise ScopusConnectionError("Network error while requesting Elsevier API.")
+
 
         self.__ts_last_req = time.time()
         self._status_code = r.status_code
