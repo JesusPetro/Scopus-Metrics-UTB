@@ -2,7 +2,7 @@ import requests, json, time
 import app.core.logging as log_util
 
 from pathlib import Path
-from ElsClient import ElsClient
+from els_client import ElsClient
 from typing import Any, Dict, List, Optional
 
 
