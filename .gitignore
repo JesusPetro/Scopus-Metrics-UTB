@@ -9,23 +9,23 @@ __pycache__/
 # Distribution / packaging
 .env
 .Python
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-pruebas/
+/env/
+/venv/
+/ENV/
+/env.bak/
+/venv.bak/
+/build/
+/develop-eggs/
+/dist/
+/downloads/
+/eggs/
+/.eggs/
+/lib/
+/lib64/
+/parts/
+/sdist/
+/var/
+/pruebas/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -92,6 +92,14 @@ node_modules/
 .wrangler/
 worker/dist/
 .dev.vars
+
+# Local DB dumps (large, not needed in the repo)
+worker/data_only.sql
+worker/dump.sql
+
+# Legacy scratch/experiment dirs (contain secrets, caches)
+legacy/pruebas/
+legacy/test/pruebas/
 
 # Local design references (not part of the build)
 inspiracion/
