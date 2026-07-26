@@ -86,3 +86,12 @@ Desktop.ini
 # Excel files (optional, remove if you want to track them)
 #*.xlsx
 #*.xls
+
+# Node / Cloudflare Workers (worker/)
+node_modules/
+.wrangler/
+worker/dist/
+.dev.vars
+
+# Local design references (not part of the build)
+inspiracion/
