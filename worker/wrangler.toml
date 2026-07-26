@@ -1,0 +1,20 @@
+name = "scopus-metrics-worker"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SCOPUS_AFFILIATION_ID = "60103889"
+
+# Secrets (ELSEVIER_APIKEY, ELSEVIER_INSTTOKEN) are NOT set here.
+# Run: wrangler secret put ELSEVIER_APIKEY
+#      wrangler secret put ELSEVIER_INSTTOKEN   (optional, only if your Scopus plan needs it)
+
+[[d1_databases]]
+binding = "DB"
+database_name = "scopus-metrics-db"
+database_id = "a6d27775-9756-4e85-8f3e-608ac9802545"
+
+# Weekly, Monday 05:00 UTC
+[triggers]
+crons = ["0 5 * * 1"]
