@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type Ref } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card } from "../components/Card";
 import { StateBoundary } from "../components/StateBoundary";
@@ -9,8 +9,8 @@ import { useApi } from "../lib/useApi";
 import { useStaggerReveal } from "../lib/motion";
 import { useElementSize } from "../lib/useElementSize";
 import { useFitCount } from "../lib/useFitCount";
+import { useAvailableViewportHeight } from "../lib/useViewportFit";
 
-const PAGE_SIZE = 15;
 const COLUMN_GAP = 20; // gap-5
 // A generous upper bound to fetch per "page" of publications — how many
 // actually render is whatever whole rows fit (see useFitCount), never this
@@ -22,25 +22,64 @@ const PUB_FETCH_BATCH = 20;
 // type/spacing, not viewport-dependent.
 const PUB_HEADER_CHROME = 91.5;
 const PUB_FOOTER_CHROME = 63;
+// Measured from the ranking card: filter bar row, table head row, and the
+// pagination footer bar — all fixed Tailwind type/spacing, not
+// viewport-dependent. Subtracted from the viewport budget to get how much is
+// actually left for tbody rows (see useFitCount below).
+const FILTER_BAR_CHROME = 52;
+const THEAD_CHROME = 46;
+const RANKING_FOOTER_CHROME = 72;
+
+function mergeRefs<T>(...refs: (Ref<T> | undefined)[]) {
+  return (node: T) => {
+    for (const ref of refs) {
+      if (!ref) continue;
+      if (typeof ref === "function") ref(node);
+      else (ref as { current: T | null }).current = node;
+    }
+  };
+}
 
 export function Ranking() {
   const [selected, setSelected] = useState<string | null>(null);
-  const [page, setPage] = useState(0);
-  const topAuthors = useApi(() => api.topAuthors(50), []);
+  const [documentType, setDocumentType] = useState<string>("");
+  const docTypes = useApi(api.documentTypes, []);
+  const topAuthors = useApi(() => api.topAuthors(50, documentType || undefined), [documentType]);
   const { ref: tableCardRef, height: tableCardHeight } = useElementSize<HTMLDivElement>();
+  const { ref: viewportAnchorRef, height: availableHeight } = useAvailableViewportHeight<HTMLDivElement>(32);
+  const tbodyBudget = availableHeight
+    ? Math.max(80, availableHeight - FILTER_BAR_CHROME - THEAD_CHROME - RANKING_FOOTER_CHROME)
+    : undefined;
 
   return (
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="text-[28px] leading-tight font-bold tracking-tight text-ink">Ranking de Investigadores</h1>
-        <p className="mt-1 text-sm text-muted">
-          Autores internos verificados (`authors.verified_internal`), ordenados por cantidad de publicaciones.
-        </p>
       </div>
 
-      <div className="grid grid-cols-1 items-start gap-6 xl:grid-cols-[1.4fr_1fr]">
+      <div ref={viewportAnchorRef} className="grid grid-cols-1 items-start gap-6 xl:grid-cols-[1.4fr_1fr]">
         <div ref={tableCardRef}>
           <Card padded={false}>
+            <div className="flex items-center justify-between gap-4 border-b border-line px-6 py-2">
+              <label className="flex items-center gap-2 text-sm">
+                <span className="font-semibold tracking-wide text-muted uppercase text-[12.5px]">Tipo de documento</span>
+                <select
+                  value={documentType}
+                  onChange={(e) => setDocumentType(e.target.value)}
+                  className="rounded-sm border border-line bg-surface px-3 py-1 text-sm text-ink focus:border-utb-blue focus:outline-none"
+                >
+                  <option value="">Todos</option>
+                  {docTypes.status === "ready" &&
+                    docTypes.data
+                      .filter((d) => d.document_type)
+                      .map((d) => (
+                        <option key={d.document_type} value={d.document_type!}>
+                          {d.document_type}
+                        </option>
+                      ))}
+                </select>
+              </label>
+            </div>
             <StateBoundary
               state={topAuthors}
               isEmpty={(d) => d.length === 0}
@@ -49,11 +88,12 @@ export function Ranking() {
             >
               {(data) => (
                 <RankingTable
+                  key={documentType}
                   data={data}
-                  page={page}
-                  onPageChange={setPage}
                   selected={selected}
                   onSelect={setSelected}
+                  countLabel={documentType ? `Publicaciones (${documentType})` : "Publicaciones"}
+                  budget={tbodyBudget}
                 />
               )}
             </StateBoundary>
@@ -68,20 +108,76 @@ export function Ranking() {
 
 function RankingTable({
   data,
-  page,
-  onPageChange,
   selected,
   onSelect,
+  countLabel,
+  budget,
 }: {
   data: { author_id: string; full_name: string; publication_count: number }[];
-  page: number;
-  onPageChange: (page: number) => void;
   selected: string | null;
   onSelect: (id: string) => void;
+  countLabel: string;
+  budget: number | undefined;
 }) {
-  const totalPages = Math.max(1, Math.ceil(data.length / PAGE_SIZE));
-  const pageData = data.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
-  const bodyRef = useStaggerReveal<HTMLTableSectionElement>([page, data]);
+  const [offset, setOffset] = useState(0);
+  const [offsetStack, setOffsetStack] = useState<number[]>([]);
+
+  return (
+    <RankingRows
+      key={offset}
+      data={data}
+      offset={offset}
+      selected={selected}
+      onSelect={onSelect}
+      countLabel={countLabel}
+      budget={budget}
+      canGoBack={offsetStack.length > 0}
+      onNext={(shown) => {
+        setOffsetStack((s) => [...s, offset]);
+        setOffset((o) => o + shown);
+      }}
+      onPrev={() => {
+        setOffsetStack((s) => {
+          if (s.length === 0) return s;
+          setOffset(s[s.length - 1]);
+          return s.slice(0, -1);
+        });
+      }}
+    />
+  );
+}
+
+// Remounted via `key={offset}` by the parent on every page change — this is
+// what forces useFitCount to re-measure from scratch (it renders the full
+// remaining candidate on first pass, then reduces `count`). Without the
+// remount, a page that lands on fewer rows than fit (e.g. the last page)
+// leaves a stale, too-small `count` baked into the hook's state, which then
+// incorrectly caps every page navigated to afterward, including back.
+function RankingRows({
+  data,
+  offset,
+  selected,
+  onSelect,
+  countLabel,
+  budget,
+  canGoBack,
+  onNext,
+  onPrev,
+}: {
+  data: { author_id: string; full_name: string; publication_count: number }[];
+  offset: number;
+  selected: string | null;
+  onSelect: (id: string) => void;
+  countLabel: string;
+  budget: number | undefined;
+  canGoBack: boolean;
+  onNext: (shown: number) => void;
+  onPrev: () => void;
+}) {
+  const candidate = data.slice(offset);
+  const bodyRef = useStaggerReveal<HTMLTableSectionElement>([offset, data]);
+  const { containerRef, count } = useFitCount<HTMLTableSectionElement>(budget, candidate.length);
+  const canGoForward = offset + count < data.length;
 
   return (
     <>
@@ -90,11 +186,11 @@ function RankingTable({
           <tr className="border-b border-line text-left text-[12.5px] font-semibold tracking-wide text-muted uppercase">
             <th className="px-6 py-3 font-semibold">#</th>
             <th className="px-3 py-3 font-semibold">Investigador</th>
-            <th className="px-6 py-3 text-right font-semibold">Publicaciones</th>
+            <th className="px-6 py-3 text-right font-semibold">{countLabel}</th>
           </tr>
         </thead>
-        <tbody ref={bodyRef}>
-          {pageData.map((author, i) => (
+        <tbody ref={mergeRefs(bodyRef, containerRef)}>
+          {candidate.slice(0, count).map((author, i) => (
             <tr
               key={author.author_id}
               onClick={() => onSelect(author.author_id)}
@@ -102,7 +198,7 @@ function RankingTable({
                 selected === author.author_id ? "bg-canvas" : ""
               }`}
             >
-              <td className="px-6 py-3 text-muted">{page * PAGE_SIZE + i + 1}</td>
+              <td className="px-6 py-3 text-muted">{offset + i + 1}</td>
               <td className="px-3 py-3 font-medium text-ink">{author.full_name}</td>
               <td className="px-6 py-3 text-right font-semibold text-ink">{author.publication_count}</td>
             </tr>
@@ -110,29 +206,27 @@ function RankingTable({
         </tbody>
       </table>
 
-      {totalPages > 1 && (
-        <div className="flex items-center justify-between px-6 py-4">
-          <p className="text-sm text-muted">
-            Página {page + 1} de {totalPages} · {data.length} investigadores
-          </p>
-          <div className="flex gap-2">
-            <button
-              onClick={() => onPageChange(Math.max(0, page - 1))}
-              disabled={page === 0}
-              className="rounded-sm border border-line px-3.5 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-canvas disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              Anterior
-            </button>
-            <button
-              onClick={() => onPageChange(Math.min(totalPages - 1, page + 1))}
-              disabled={page >= totalPages - 1}
-              className="rounded-sm border border-line px-3.5 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-canvas disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              Siguiente
-            </button>
-          </div>
+      <div className="flex items-center justify-between px-6 py-4">
+        <p className="text-sm text-muted">
+          Mostrando {data.length === 0 ? 0 : offset + 1}–{Math.min(offset + count, data.length)} de {data.length} investigadores
+        </p>
+        <div className="flex gap-2">
+          <button
+            onClick={onPrev}
+            disabled={!canGoBack}
+            className="rounded-sm border border-line px-3.5 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-canvas disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Anterior
+          </button>
+          <button
+            onClick={() => onNext(count)}
+            disabled={!canGoForward}
+            className="rounded-sm border border-line px-3.5 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-canvas disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Siguiente
+          </button>
         </div>
-      )}
+      </div>
     </>
   );
 }

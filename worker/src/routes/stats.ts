@@ -23,7 +23,8 @@ statsRoutes.get("/document-types", async (c) => {
 
 statsRoutes.get("/top-authors", async (c) => {
   const limit = Number(c.req.query("limit") ?? "20");
-  const data = await topPublishers(c.env.DB, limit);
+  const documentType = c.req.query("document_type") || undefined;
+  const data = await topPublishers(c.env.DB, limit, documentType);
   return c.json({ data });
 });
 

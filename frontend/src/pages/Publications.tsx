@@ -31,6 +31,7 @@ export function Publications() {
   const tbodyBudget = availableHeight ? Math.max(80, availableHeight - THEAD_HEIGHT - FOOTER_HEIGHT) : undefined;
 
   const docTypes = useApi(api.documentTypes, []);
+  const years = useApi(api.growth, []);
   const publications = useApi(
     () =>
       api.publications({
@@ -80,13 +81,21 @@ export function Publications() {
       <Card>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Field label="Año">
-            <input
-              type="number"
+            <select
               value={year}
               onChange={(e) => updateFilter("year", setYear, e.target.value)}
-              placeholder="Todos"
-              className="w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-utb-blue focus:outline-none"
-            />
+              className="w-full rounded-sm border border-line bg-surface px-3 py-2 text-sm text-ink focus:border-utb-blue focus:outline-none"
+            >
+              <option value="">Todos</option>
+              {years.status === "ready" &&
+                [...years.data]
+                  .sort((a, b) => b.year - a.year)
+                  .map((y) => (
+                    <option key={y.year} value={y.year}>
+                      {y.year}
+                    </option>
+                  ))}
+            </select>
           </Field>
           <Field label="Tipo de documento">
             <select

@@ -69,19 +69,29 @@ export interface TopPublisher {
   publication_count: number;
 }
 
-export async function topPublishers(db: D1Database, limit = 20): Promise<TopPublisher[]> {
-  const { results } = await db
-    .prepare(
-      `SELECT a.id as author_id, a.full_name, COUNT(*) as publication_count
+export async function topPublishers(
+  db: D1Database,
+  limit = 20,
+  documentType?: string
+): Promise<TopPublisher[]> {
+  const query = documentType
+    ? `SELECT a.id as author_id, a.full_name, COUNT(*) as publication_count
+       FROM publication_authors pa
+       JOIN authors a ON a.id = pa.author_id
+       JOIN publications p ON p.id = pa.publication_id
+       WHERE a.verified_internal = 1 AND p.document_type = ?2
+       GROUP BY pa.author_id
+       ORDER BY publication_count DESC
+       LIMIT ?1`
+    : `SELECT a.id as author_id, a.full_name, COUNT(*) as publication_count
        FROM publication_authors pa
        JOIN authors a ON a.id = pa.author_id
        WHERE a.verified_internal = 1
        GROUP BY pa.author_id
        ORDER BY publication_count DESC
-       LIMIT ?1`
-    )
-    .bind(limit)
-    .all<TopPublisher>();
+       LIMIT ?1`;
+  const stmt = documentType ? db.prepare(query).bind(limit, documentType) : db.prepare(query).bind(limit);
+  const { results } = await stmt.all<TopPublisher>();
   return results;
 }
 

@@ -9,6 +9,8 @@ import type {
   YearCount,
 } from "./types";
 
+const API_BASE = "https://scopus-metrics-worker.utb-research.workers.dev";
+
 export class ApiError extends Error {
   status: number;
 
@@ -25,7 +27,7 @@ export interface Page<T> {
 }
 
 async function request<T>(path: string): Promise<T> {
-  const res = await fetch(path);
+  const res = await fetch(`${API_BASE}${path}`);
   if (!res.ok) {
     const body = await res.json().catch(() => ({ error: res.statusText }));
     throw new ApiError(body.error ?? res.statusText, res.status);
@@ -35,7 +37,7 @@ async function request<T>(path: string): Promise<T> {
 }
 
 async function requestPage<T>(path: string): Promise<Page<T>> {
-  const res = await fetch(path);
+  const res = await fetch(`${API_BASE}${path}`);
   if (!res.ok) {
     const body = await res.json().catch(() => ({ error: res.statusText }));
     throw new ApiError(body.error ?? res.statusText, res.status);
@@ -49,7 +51,11 @@ export type PublicationSort = "date" | "citations" | "year" | "title";
 export const api = {
   growth: () => request<YearCount[]>("/api/stats/growth"),
   documentTypes: () => request<DocumentTypeCount[]>("/api/stats/document-types"),
-  topAuthors: (limit = 20) => request<TopPublisher[]>(`/api/stats/top-authors?limit=${limit}`),
+  topAuthors: (limit = 20, documentType?: string) => {
+    const params = new URLSearchParams({ limit: String(limit) });
+    if (documentType) params.set("document_type", documentType);
+    return request<TopPublisher[]>(`/api/stats/top-authors?${params.toString()}`);
+  },
   topJournals: (limit = 8) => request<TopJournal[]>(`/api/stats/top-journals?limit=${limit}`),
   coauthorship: () => request<CoauthorshipGraph>("/api/stats/coauthorship"),
   authors: (limit = 100, offset = 0) => request<AuthorRow[]>(`/api/authors?limit=${limit}&offset=${offset}`),
