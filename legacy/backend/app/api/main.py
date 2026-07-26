@@ -1,7 +1,7 @@
 from fastapi import APIRouter, FastAPI
 from app.core.config import loggin
-from app.scopus.ElsClient import elsClient
-from app.api.v1.error import init_error_handlers
+from app.scopus.els_client import elsClient
+from app.api.error import init_error_handlers
 
 loggin.log_to_directory('logs')
 

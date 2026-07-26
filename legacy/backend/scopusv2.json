@@ -1,0 +1,1210 @@
+[
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105010266217",
+        "dc:title": "DRIVING THE DEVELOPMENT OF ENERGY COMMUNITIES IN COLOMBIA: CHALLENGES AND OPPORTUNITIES FOR A DECENTRALIZED ENERGY TRANSITION",
+        "prism:publicationName": "Habitat Sustentable",
+        "prism:volume": "15",
+        "prism:issueIdentifier": "1",
+        "prism:coverDate": "2025-06-01",
+        "prism:doi": "10.22320/07190700.2025.15.01.01",
+        "citedby-count": "1",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57221229836",
+                "authid": "57221229836",
+                "orcid": "0000-0003-1895-0859",
+                "authname": "Medina-Reyes M.F.",
+                "surname": "Medina-Reyes",
+                "given-name": "María Fernanda",
+                "initials": "M.F."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/56581610900",
+                "authid": "56581610900",
+                "orcid": "0000-0002-5675-7796",
+                "authname": "Fajardo-Cuadro J.G.",
+                "surname": "Fajardo-Cuadro",
+                "given-name": "Juan Gabriel",
+                "initials": "J.G."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martínez-Santos J.C.",
+                "surname": "Martínez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105004062939",
+        "dc:title": "A computer vision system for detecting motorcycle violations in pedestrian zones",
+        "prism:publicationName": "Multimedia Tools and Applications",
+        "prism:volume": "84",
+        "prism:issueIdentifier": "13",
+        "prism:coverDate": "2025-04-01",
+        "prism:doi": "10.1007/s11042-024-19356-9",
+        "citedby-count": "2",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220077564",
+                "authid": "57220077564",
+                "orcid": "0000-0001-9130-7769",
+                "authname": "Hernández-Díaz N.",
+                "surname": "Hernández-Díaz",
+                "given-name": "Nicolás",
+                "initials": "N."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57580976200",
+                "authid": "57580976200",
+                "orcid": "0000-0003-3486-415X",
+                "authname": "Peñaloza Y.C.",
+                "surname": "Peñaloza",
+                "given-name": "Yersica C.",
+                "initials": "Y.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57204642964",
+                "authid": "57204642964",
+                "orcid": "0000-0001-7009-6632",
+                "authname": "Rios Y.Y.",
+                "surname": "Rios",
+                "given-name": "Y. Yuliana",
+                "initials": "Y.Y."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85215238378",
+        "dc:title": "The media framing dataset: Analyzing news narratives in Mexico and Colombia",
+        "prism:publicationName": "Data in Brief",
+        "prism:volume": "58",
+        "prism:coverDate": "2025-02-01",
+        "prism:doi": "10.1016/j.dib.2025.111284",
+        "citedby-count": "0",
+        "subtype": "dp",
+        "subtypeDescription": "Data Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57422728000",
+                "authid": "57422728000",
+                "orcid": "0000-0002-8226-1372",
+                "authname": "Cuadrado J.",
+                "surname": "Cuadrado",
+                "given-name": "Juan",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/58459662800",
+                "authid": "58459662800",
+                "authname": "Martinez E.",
+                "surname": "Martinez",
+                "given-name": "Elizabeth",
+                "initials": "E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/86000451627",
+        "dc:title": "Mapping Motion: A Cognitive Approach to Dyspraxia Multimodal Analysis",
+        "prism:publicationName": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
+        "prism:volume": "15277 LNCS",
+        "prism:coverDate": "2025-01-01",
+        "prism:doi": "10.1007/978-3-031-80366-6_2",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59679932300",
+                "authid": "59679932300",
+                "authname": "Muvdi D.",
+                "surname": "Muvdi",
+                "given-name": "David",
+                "initials": "D."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59679279900",
+                "authid": "59679279900",
+                "authname": "Hernández M.R.",
+                "surname": "Hernández",
+                "given-name": "Mateo R.",
+                "initials": "M.R."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59679062200",
+                "authid": "59679062200",
+                "authname": "Cifuentes E.J.",
+                "surname": "Cifuentes",
+                "given-name": "Eiker J.",
+                "initials": "E.J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59679712000",
+                "authid": "59679712000",
+                "authname": "Di Somma A.",
+                "surname": "Di Somma",
+                "given-name": "Andrea",
+                "initials": "A."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59680145600",
+                "authid": "59680145600",
+                "authname": "Chiappone F.",
+                "surname": "Chiappone",
+                "given-name": "Francesco",
+                "initials": "F."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "6",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59680358200",
+                "authid": "59680358200",
+                "authname": "Di Maro V.",
+                "surname": "Di Maro",
+                "given-name": "Vicenzo",
+                "initials": "V."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "7",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "authname": "Martínez-Santos J.C.",
+                "surname": "Martínez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "8",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019313383",
+        "dc:title": "Closing the Gender Gap in STEM: Impact of Challenge-Based Training on Girls in Cartagena de Indias",
+        "prism:publicationName": "Proceedings of the Laccei International Multi Conference for Engineering Education and Technology",
+        "prism:issueIdentifier": "2025",
+        "prism:coverDate": "2025-01-01",
+        "prism:doi": "10.18687/LACCEI2025.1.1.2027",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59663388700",
+                "authid": "59663388700",
+                "orcid": "0000-0002-6100-9629",
+                "authname": "Osorio C.",
+                "surname": "Osorio",
+                "given-name": "Cristina",
+                "initials": "C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57210822856",
+                "authid": "57210822856",
+                "orcid": "0000-0003-2461-2100",
+                "authname": "Contreras-Ortiz S.H.",
+                "surname": "Contreras-Ortiz",
+                "given-name": "Sonia H.",
+                "initials": "S.H."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220077867",
+                "authid": "57220077867",
+                "orcid": "0000-0002-8636-482X",
+                "authname": "Ojeda-Caicedo V.V.",
+                "surname": "Ojeda-Caicedo",
+                "given-name": "Vilma V.",
+                "initials": "V.V."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60151012300",
+                "authid": "60151012300",
+                "authname": "Marcela García De la Ossa E.",
+                "surname": "Marcela García De la Ossa",
+                "given-name": "Everly",
+                "initials": "E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "6",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59497527300",
+                "authid": "59497527300",
+                "authname": "David Neira Salas J.",
+                "surname": "David Neira Salas",
+                "given-name": "Jeison",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "7",
+                "author-url": "https://api.elsevier.com/content/author/author_id/58618811100",
+                "authid": "58618811100",
+                "authname": "Lusbin Ariza-Rua D.",
+                "surname": "Lusbin Ariza-Rua",
+                "given-name": "Danilo",
+                "initials": "D."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019296951",
+        "dc:title": "Impacts of mentoring and support networks on the self-efficacy and self-regulation of women engineering students",
+        "prism:publicationName": "Proceedings of the Laccei International Multi Conference for Engineering Education and Technology",
+        "prism:issueIdentifier": "2025",
+        "prism:coverDate": "2025-01-01",
+        "prism:doi": "10.18687/LACCEI2025.1.1.2021",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57210822856",
+                "authid": "57210822856",
+                "orcid": "0000-0003-2461-2100",
+                "authname": "Contreras-Ortiz S.H.",
+                "surname": "Contreras-Ortiz",
+                "given-name": "Sonia H.",
+                "initials": "S.H."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220077867",
+                "authid": "57220077867",
+                "orcid": "0000-0002-8636-482X",
+                "authname": "Ojeda-Caicedo V.V.",
+                "surname": "Ojeda-Caicedo",
+                "given-name": "Vilma V.",
+                "initials": "V.V."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59663388700",
+                "authid": "59663388700",
+                "orcid": "0000-0002-6100-9629",
+                "authname": "Osorio C.",
+                "surname": "Osorio",
+                "given-name": "Cristina",
+                "initials": "C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57203321995",
+                "authid": "57203321995",
+                "orcid": "0000-0002-3240-382X",
+                "authname": "Altamar-Mercado H.",
+                "surname": "Altamar-Mercado",
+                "given-name": "Hernando",
+                "initials": "H."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019060674",
+        "dc:title": "VerbaNexAI at CLEF 2025 JOKER Task 3: Multi-Model LLM Approach for Onomastic Wordplay Translation",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60145902400",
+                "authid": "60145902400",
+                "orcid": "0000-0002-0877-7063",
+                "authname": "Ramirez M.P.",
+                "surname": "Ramirez",
+                "given-name": "Maria Paz",
+                "initials": "M.P."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60035987100",
+                "authid": "60035987100",
+                "orcid": "0009-0001-0134-8426",
+                "authname": "Jimenez J.D.",
+                "surname": "Jimenez",
+                "given-name": "Jeison D.",
+                "initials": "J.D."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146004900",
+                "authid": "60146004900",
+                "orcid": "0009-0005-2172-6905",
+                "authname": "Sánchez D.G.",
+                "surname": "Sánchez",
+                "given-name": "Deyson Gómez",
+                "initials": "D.G."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.E.",
+                "surname": "Serrano",
+                "given-name": "Jairo E.",
+                "initials": "J.E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "6",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019059818",
+        "dc:title": "VerbaNexAI at CheckThat! 2025: Fine-Tuning DeBERTa for Multi-Label Scientific Discourse Detection in Tweets",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146214600",
+                "authid": "60146214600",
+                "orcid": "0009-0003-4095-3332",
+                "authname": "Borrero M.J.S.",
+                "surname": "Borrero",
+                "given-name": "Mervin Jesus Sosa",
+                "initials": "M.J.S."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Castañeda J.E.S.",
+                "surname": "Castañeda",
+                "given-name": "Jairo Enrique Serrano",
+                "initials": "J.E.S."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Santos J.C.M.",
+                "surname": "Santos",
+                "given-name": "Juan Carlos Martinez",
+                "initials": "J.C.M."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Del Castillo E.A.P.",
+                "surname": "Del Castillo",
+                "given-name": "Edwin Alexander Puertas",
+                "initials": "E.A.P."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019059289",
+        "dc:title": "COTECMAR-UTB at eRisk 2025: Semantic-Centroid Symptom Ranking and Early Depression Detection using Adaptive Decision Rule",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146338900",
+                "authid": "60146338900",
+                "orcid": "0009-0001-4660-4892",
+                "authname": "Mendoza L.",
+                "surname": "Mendoza",
+                "given-name": "Luis",
+                "initials": "L."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146036800",
+                "authid": "60146036800",
+                "orcid": "0009-0007-7874-8261",
+                "authname": "Suarez J.",
+                "surname": "Suarez",
+                "given-name": "Joan",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez J.",
+                "surname": "Martinez",
+                "given-name": "Juan",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.",
+                "surname": "Serrano",
+                "given-name": "Jairo",
+                "initials": "J."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019059160",
+        "dc:title": "VerbaNex at TalentCLEF2025: Semantic Matching of Multilingual Job Titles through a Framework Integrating ESCO Taxonomy",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60145854900",
+                "authid": "60145854900",
+                "orcid": "0000-0002-1748-2208",
+                "authname": "Novoa M.M.",
+                "surname": "Novoa",
+                "given-name": "Melissa Moreno",
+                "initials": "M.M."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.",
+                "surname": "Serrano",
+                "given-name": "Jairo",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019057106",
+        "dc:title": "Development of a Biomedical Question Answering System Based on Transformer Models",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146208800",
+                "authid": "60146208800",
+                "orcid": "0009-0008-7763-9933",
+                "authname": "López L.",
+                "surname": "López",
+                "given-name": "Lila",
+                "initials": "L."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019057081",
+        "dc:title": "RoBERT-IA: Human-AI Collaborative Text Classification",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146004900",
+                "authid": "60146004900",
+                "orcid": "0009-0005-2172-6905",
+                "authname": "Sánchez D.G.",
+                "surname": "Sánchez",
+                "given-name": "Deyson Gómez",
+                "initials": "D.G."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60035987100",
+                "authid": "60035987100",
+                "orcid": "0009-0001-0134-8426",
+                "authname": "Jimenez J.D.",
+                "surname": "Jimenez",
+                "given-name": "Jeison D.",
+                "initials": "J.D."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60145902400",
+                "authid": "60145902400",
+                "authname": "Ramírez M.P.",
+                "surname": "Ramírez",
+                "given-name": "María Paz",
+                "initials": "M.P."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.E.",
+                "surname": "Serrano",
+                "given-name": "Jairo E.",
+                "initials": "J.E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "6",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019055348",
+        "dc:title": "UTBNLP at CLEF JOKER 2025 Task 2: mBART-50 Fine-Tuning with Dictionary-Guided Forced Decoding and Phoneme-Based Techniques for English-French Pun Translation",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57221469260",
+                "authid": "57221469260",
+                "orcid": "0009-0002-9537-0209",
+                "authname": "Marrugo-Tobon D.A.",
+                "surname": "Marrugo-Tobon",
+                "given-name": "Duvan Andres",
+                "initials": "D.A."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60035987100",
+                "authid": "60035987100",
+                "orcid": "0009-0001-0134-8426",
+                "authname": "Jimenez J.D.",
+                "surname": "Jimenez",
+                "given-name": "Jeison D.",
+                "initials": "J.D."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.E.",
+                "surname": "Serrano",
+                "given-name": "Jairo E.",
+                "initials": "J.E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "5",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019047967",
+        "dc:title": "Tiles-wise Inference with Vision Transformers for Multispecies Identification in Vegetation Images",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146087900",
+                "authid": "60146087900",
+                "orcid": "0000-0002-6861-7547",
+                "authname": "Menco-Tovar A.",
+                "surname": "Menco-Tovar",
+                "given-name": "Andrea",
+                "initials": "A."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.E.",
+                "surname": "Serrano",
+                "given-name": "Jairo E.",
+                "initials": "J.E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019046953",
+        "dc:title": "Prediction of Human Preferences and Explanation Generation with LLM: An Approach Based on RAG, Few-Shot Learning, and Auto-CoT",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "1",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/59500390600",
+                "authid": "59500390600",
+                "orcid": "0000-0002-1664-0008",
+                "authname": "Almanza-Gonzalez D.",
+                "surname": "Almanza-Gonzalez",
+                "given-name": "Danileth",
+                "initials": "D."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.E.",
+                "surname": "Serrano",
+                "given-name": "Jairo E.",
+                "initials": "J.E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019045699",
+        "dc:title": "CEDNAV–UTB: Efficient Image Retrieval for Arguments with CLIP",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "1",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146141700",
+                "authid": "60146141700",
+                "orcid": "0009-0003-3192-0328",
+                "authname": "Amaya D.A.G.",
+                "surname": "Amaya",
+                "given-name": "Diego Alberto Guevara",
+                "initials": "D.A.G."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Castañeda J.E.S.",
+                "surname": "Castañeda",
+                "given-name": "Jairo Enrique Serrano",
+                "initials": "J.E.S."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan C.",
+                "initials": "J.C."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019042653",
+        "dc:title": "COTECMAR–UTB at TalentCLEF 2025: Linking Job Titles and ESCO Skills with Sentence Transformer Embeddings",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/60146058500",
+                "authid": "60146058500",
+                "orcid": "0009-0005-9993-5061",
+                "authname": "Llamas J.",
+                "surname": "Llamas",
+                "given-name": "Jhonattan",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.",
+                "surname": "Serrano",
+                "given-name": "Jairo",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez J.",
+                "surname": "Martinez",
+                "given-name": "Juan",
+                "initials": "J."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105019042517",
+        "dc:title": "Hybrid Re-ranking for Biomedical Entity Linking using SapBERT Embeddings: A High-Performance System for BioNNE-L 2025-1",
+        "prism:publicationName": "Ceur Workshop Proceedings",
+        "prism:volume": "4038",
+        "prism:coverDate": "2025-01-01",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57203171916",
+                "authid": "57203171916",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Gnecco D.P.",
+                "surname": "Gnecco",
+                "given-name": "Daniel Peña",
+                "initials": "D.P."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57220927199",
+                "authid": "57220927199",
+                "orcid": "0000-0001-8165-7343",
+                "authname": "Serrano J.",
+                "surname": "Serrano",
+                "given-name": "Jairo",
+                "initials": "J."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "4",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            }
+        ]
+    },
+    {
+        "@_fa": "true",
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/105016331457",
+        "dc:title": "Economic Optimization of Local Energy Markets: Strategies for Prosumers with IoT and Blockchain Integration",
+        "prism:publicationName": "1st IEEE Latin American Conference on Internet of Things Lciot 2025 Proceedings",
+        "prism:coverDate": "2025-01-01",
+        "prism:doi": "10.1109/LCIoT64881.2025.11118552",
+        "citedby-count": "0",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "author": [
+            {
+                "@_fa": "true",
+                "@seq": "1",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57221229836",
+                "authid": "57221229836",
+                "orcid": "0000-0003-1895-0859",
+                "authname": "Medina-Reyes M.F.",
+                "surname": "Medina-Reyes",
+                "given-name": "Maria Fernanda",
+                "initials": "M.F."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "2",
+                "author-url": "https://api.elsevier.com/content/author/author_id/57202285682",
+                "authid": "57202285682",
+                "orcid": "0000-0002-0758-1851",
+                "authname": "Puertas E.",
+                "surname": "Puertas",
+                "given-name": "Edwin",
+                "initials": "E."
+            },
+            {
+                "@_fa": "true",
+                "@seq": "3",
+                "author-url": "https://api.elsevier.com/content/author/author_id/26325154200",
+                "authid": "26325154200",
+                "orcid": "0000-0003-2755-0718",
+                "authname": "Martinez-Santos J.C.",
+                "surname": "Martinez-Santos",
+                "given-name": "Juan Carlos",
+                "initials": "J.C."
+            }
+        ]
+    }
+]

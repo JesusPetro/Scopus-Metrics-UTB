@@ -5,7 +5,6 @@ from app.core.logging import LOGGERS, add_file_handle_to_logger
 
 # ======== Paths base =========
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(BASE_DIR)
 DATA_DIR = BASE_DIR / "data"
 UPLOADS_DIR = DATA_DIR / "upload"
 PROCESSED_DIR = DATA_DIR / "processed"

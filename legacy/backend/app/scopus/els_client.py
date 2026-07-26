@@ -35,7 +35,7 @@ class ElsClient:
             raise ScopusAuthError(msg)
 
         if local_dir is None: 
-            self.local_dir = Path.cwd()  / 'data'
+            self.local_dir = Path.cwd()  / 'app' / 'data'
         else:
             self.local_dir = Path(local_dir)
 

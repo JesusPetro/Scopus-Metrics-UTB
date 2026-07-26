@@ -1,10 +1,7 @@
 import time, logging
 from pathlib import Path
 
-
-
 LOGGERS = {}
-
 
 def _make_logger(name):
     """
