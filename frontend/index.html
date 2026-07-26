@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon_utb.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scopus-Metrics-utb</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>UTB Research Analytics</title>
   </head>
   <body>
-    <form
-      action="http://127.0.0.1:8000/uploadfile/"
-      method="post"
-      enctype="multipart/form-data"
-    >
-      <label for="file">Upload XLSX file:</label>
-      <input type="file" id="file" name="file" accept=".xlsx" />
-      <button type="submit">Submit</button>
-    </form>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

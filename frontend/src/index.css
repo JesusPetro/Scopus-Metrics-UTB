@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/*
+  Tokens mirrored from DESIGN.md's frontmatter — DESIGN.md is normative;
+  this file just wires those same values into Tailwind's theme.
+*/
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-utb-blue: #093ad8;
+  --color-utb-blue-soft: #3b62e0;
+  --color-utb-cyan: #70f2fc;
+  --color-utb-green-deep: #105149;
+  --color-utb-green: #71ec37;
+  --color-utb-amber: #ffbc15;
+  --color-utb-purple: #6259e2;
+  --color-navy-deep: #071b4d;
+  --color-ink: #1c1c1e;
+  --color-muted: #9a9aa2;
+  --color-line: #ececf0;
+  --color-surface: #ffffff;
+  --color-canvas: #f5f5f6;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --shadow-card: 0 1px 2px rgba(16, 16, 24, 0.04), 0 8px 24px rgba(16, 16, 24, 0.05);
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100svh;
+}
