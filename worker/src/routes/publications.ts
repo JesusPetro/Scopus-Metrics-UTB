@@ -20,6 +20,7 @@ publicationRoutes.get("/", async (c) => {
     year: year ? Number(year) : undefined,
     documentType,
     subjectArea,
+    institutionId: c.req.query("institution") || undefined,
   };
 
   const [data, total] = await Promise.all([

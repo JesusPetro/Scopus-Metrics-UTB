@@ -61,20 +61,55 @@ export async function replacePublicationSubjectAreas(
   if (statements.length > 0) await db.batch(statements);
 }
 
+/**
+ * Authorship fact (who wrote this paper, in what order) - institution-agnostic,
+ * so re-ingesting the same publication from a different institution's sync
+ * (e.g. a paper co-authored across two compared universities) is a harmless
+ * overwrite of the same author list Scopus reports either way.
+ */
 export async function replacePublicationAuthors(
   db: D1Database,
   publicationId: string,
-  authors: { authorId: string; order: number; isInternal: boolean }[]
+  authors: { authorId: string; order: number }[]
 ): Promise<void> {
   const statements = [
     db.prepare(`DELETE FROM publication_authors WHERE publication_id = ?1`).bind(publicationId),
     ...authors.map((a) =>
       db
         .prepare(
-          `INSERT INTO publication_authors (publication_id, author_id, author_order, is_internal)
+          `INSERT INTO publication_authors (publication_id, author_id, author_order)
+           VALUES (?1, ?2, ?3)`
+        )
+        .bind(publicationId, a.authorId, a.order)
+    ),
+  ];
+  await db.batch(statements);
+}
+
+/**
+ * Institution-relative `is_internal` reading (that author's afid matched this
+ * institution's affiliation on this paper). Scoped delete+insert by
+ * (publication_id, institution_id) only - unlike a single is_internal column,
+ * this can't be clobbered by a different institution's sync touching the same
+ * shared publication.
+ */
+export async function replacePublicationAuthorInstitutions(
+  db: D1Database,
+  publicationId: string,
+  institutionId: string,
+  authors: { authorId: string; isInternal: boolean }[]
+): Promise<void> {
+  const statements = [
+    db
+      .prepare(`DELETE FROM publication_author_institutions WHERE publication_id = ?1 AND institution_id = ?2`)
+      .bind(publicationId, institutionId),
+    ...authors.map((a) =>
+      db
+        .prepare(
+          `INSERT INTO publication_author_institutions (publication_id, author_id, institution_id, is_internal)
            VALUES (?1, ?2, ?3, ?4)`
         )
-        .bind(publicationId, a.authorId, a.order, a.isInternal ? 1 : 0)
+        .bind(publicationId, a.authorId, institutionId, a.isInternal ? 1 : 0)
     ),
   ];
   await db.batch(statements);
@@ -94,34 +129,57 @@ export interface PublicationFilter {
   authorId?: string;
   documentType?: string;
   subjectArea?: string;
+  /** Restrict to publications with at least one author verified-internal to this institution. */
+  institutionId?: string;
 }
 
-/** Shared join/where builder so list and count never drift out of sync with each other. */
+/**
+ * Shared join/where builder so list and count never drift out of sync with
+ * each other. Placeholders inside `joins` and inside `where` are tracked in
+ * separate bind arrays and concatenated join-then-where, matching the order
+ * they'll actually appear in the final `FROM publications p${joins}${where}`
+ * SQL text - binds must be positional, so join-placeholder order must not be
+ * interleaved with where-placeholder order.
+ */
 function buildPublicationQuery(opts: PublicationFilter): { joins: string; where: string; binds: unknown[] } {
   const conditions: string[] = [];
-  const binds: unknown[] = [];
+  const joinBinds: unknown[] = [];
+  const whereBinds: unknown[] = [];
   let joins = "";
 
   if (opts.authorId) {
     joins += ` JOIN publication_authors pa ON pa.publication_id = p.id`;
     conditions.push(`pa.author_id = ?`);
-    binds.push(opts.authorId);
+    whereBinds.push(opts.authorId);
+  }
+  if (opts.institutionId) {
+    // Authoritative verified_internal (trust model), not the raw per-paper
+    // afid match on publication_author_institutions.is_internal - same
+    // reasoning as topPublishers/coauthorshipGraph in services/metrics.ts.
+    joins += ` JOIN publication_author_institutions pai ON pai.publication_id = p.id AND pai.institution_id = ?
+               JOIN author_institutions ai ON ai.author_id = pai.author_id AND ai.institution_id = pai.institution_id`;
+    conditions.push(`ai.verified_internal = 1`);
+    joinBinds.push(opts.institutionId);
   }
   if (opts.subjectArea) {
     joins += ` JOIN publication_subject_areas psa ON psa.publication_id = p.id`;
     conditions.push(`psa.name = ?`);
-    binds.push(opts.subjectArea);
+    whereBinds.push(opts.subjectArea);
   }
   if (opts.year) {
     conditions.push(`p.year = ?`);
-    binds.push(opts.year);
+    whereBinds.push(opts.year);
   }
   if (opts.documentType) {
     conditions.push(`p.document_type = ?`);
-    binds.push(opts.documentType);
+    whereBinds.push(opts.documentType);
   }
 
-  return { joins, where: conditions.length > 0 ? ` WHERE ${conditions.join(" AND ")}` : "", binds };
+  return {
+    joins,
+    where: conditions.length > 0 ? ` WHERE ${conditions.join(" AND ")}` : "",
+    binds: [...joinBinds, ...whereBinds],
+  };
 }
 
 export async function listPublications(

@@ -3,8 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2024-11-01"
 compatibility_flags = ["nodejs_compat"]
 
-[vars]
-SCOPUS_AFFILIATION_ID = "60103889"
+# Institutions (name + Scopus Affiliation ID + whitelist) now live in the DB
+# (see migrations/0004_institutions.sql, table `institutions`) instead of env
+# vars, so adding a university no longer requires a code change + redeploy.
 
 # Secrets (ELSEVIER_APIKEY, ELSEVIER_INSTTOKEN) are NOT set here.
 # Run: wrangler secret put ELSEVIER_APIKEY

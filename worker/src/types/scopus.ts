@@ -59,11 +59,11 @@ function parseSubjectAreas(entry: Record<string, any>): ParsedSubjectArea[] {
     .filter((s) => s.code && s.name);
 }
 
-function afidMatches(author: Record<string, any>, affiliationId: string): boolean {
+function extractAfids(author: Record<string, any>): string[] {
   const afid = author["afid"];
-  if (!afid) return false;
+  if (!afid) return [];
   const list = Array.isArray(afid) ? afid : [afid];
-  return list.some((a) => String(a?.["$"] ?? a) === affiliationId);
+  return list.map((a) => String(a?.["$"] ?? a));
 }
 
 /**
@@ -89,12 +89,32 @@ export function parseEntry(entry: Record<string, any>, affiliationId: string): P
   }
 
   const rawAuthors: Record<string, any>[] = Array.isArray(entry["author"]) ? entry["author"] : [];
-  const authors: ParsedAuthor[] = rawAuthors.map((a, idx) => ({
-    authorId: String(a["authid"] ?? ""),
-    fullName: String(a["authname"] ?? "Unknown"),
-    order: idx + 1,
-    isInternal: afidMatches(a, affiliationId),
-  })).filter((a) => a.authorId);
+
+  // Scopus can list the same author more than once in one entry's author
+  // array when they hold more than one affiliation - each occurrence carries
+  // a different afid for the same authid (this is the dual-affiliation /
+  // cátedra-en-dos-universidades case). Collapse by authorId and union their
+  // afids, otherwise two ParsedAuthor rows for the same (publication, author)
+  // pair violate publication_authors' unique key at insert time.
+  const byAuthorId = new Map<string, { fullName: string; order: number; afids: string[] }>();
+  rawAuthors.forEach((a, idx) => {
+    const authorId = String(a["authid"] ?? "");
+    if (!authorId) return;
+    const afids = extractAfids(a);
+    const existing = byAuthorId.get(authorId);
+    if (existing) {
+      existing.afids.push(...afids);
+    } else {
+      byAuthorId.set(authorId, { fullName: String(a["authname"] ?? "Unknown"), order: idx + 1, afids });
+    }
+  });
+
+  const authors: ParsedAuthor[] = Array.from(byAuthorId.entries()).map(([authorId, v]) => ({
+    authorId,
+    fullName: v.fullName,
+    order: v.order,
+    isInternal: v.afids.includes(affiliationId),
+  }));
 
   return {
     id: String(id),

@@ -9,7 +9,8 @@ export const authorRoutes = new Hono<{ Bindings: Env }>();
 authorRoutes.get("/", async (c) => {
   const limit = Number(c.req.query("limit") ?? "100");
   const offset = Number(c.req.query("offset") ?? "0");
-  const data = await listAuthors(c.env.DB, limit, offset);
+  const institutionId = c.req.query("institution") || undefined;
+  const data = await listAuthors(c.env.DB, limit, offset, institutionId);
   return c.json({ data });
 });
 
