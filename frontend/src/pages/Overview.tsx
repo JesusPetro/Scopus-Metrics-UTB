@@ -8,6 +8,7 @@ import { HorizontalBarChart } from "../components/charts/HorizontalBarChart";
 import { IconInfo } from "../components/icons";
 import { api } from "../lib/api";
 import { useApi } from "../lib/useApi";
+import { useInstitution } from "../lib/InstitutionContext";
 import { useStaggerReveal } from "../lib/motion";
 import { useElementSize } from "../lib/useElementSize";
 
@@ -21,16 +22,20 @@ const INVESTIGADOR_ROW_HEIGHT = 53;
 
 export function Overview() {
   const navigate = useNavigate();
-  const growth = useApi(api.growth, []);
-  const docTypes = useApi(api.documentTypes, []);
+  const { institutions, selectedId, ready } = useInstitution();
+  const institutionName = institutions.find((i) => i.id === selectedId)?.name ?? "la institución seleccionada";
+  const growth = useApi(() => api.growth(selectedId ?? undefined), [selectedId]);
+  const docTypes = useApi(() => api.documentTypes(selectedId ?? undefined), [selectedId]);
   // Fetched generously; how many actually render is computed to fit Producción's
   // measured height exactly (see `investigadoresFit` below) — never a fixed count.
-  const topAuthors = useApi(() => api.topAuthors(20), []);
+  const topAuthors = useApi(() => api.topAuthors(20, undefined, selectedId ?? undefined), [selectedId]);
   const { ref: produccionRef, height: produccionHeight } = useElementSize<HTMLDivElement>();
   const investigadoresFit =
     produccionHeight > 0 ? Math.max(1, Math.floor((produccionHeight - INVESTIGADORES_CHROME) / INVESTIGADOR_ROW_HEIGHT)) : 6;
-  const topJournals = useApi(() => api.topJournals(6), []);
+  const topJournals = useApi(() => api.topJournals(6, selectedId ?? undefined), [selectedId]);
   const tilesRef = useStaggerReveal<HTMLDivElement>([growth.status, topAuthors.status]);
+
+  if (!ready) return null;
 
   const totalPublications = growth.status === "ready" ? growth.data.reduce((s, y) => s + y.count, 0) : undefined;
   const totalDocTyped = docTypes.status === "ready" ? docTypes.data.reduce((s, d) => s + d.count, 0) : undefined;
@@ -64,9 +69,9 @@ export function Overview() {
       <div className="flex items-start gap-3 rounded-lg border border-utb-blue/15 bg-utb-blue/5 p-4">
         <IconInfo className="mt-0.5 h-4.5 w-4.5 shrink-0 text-utb-blue" />
         <p className="text-sm text-ink/80">
-          Este análisis cubre únicamente artículos donde la <strong className="font-semibold">Universidad Tecnológica de Bolívar (UTB)</strong> figura
-          como afiliación en Scopus. Si un docente publicó bajo otra afiliación (o sin afiliar a la UTB), esos artículos no quedan
-          contados acá — por eso algunos números pueden diferir de lo que ves directamente en Scopus.
+          Este análisis cubre únicamente artículos donde <strong className="font-semibold">{institutionName}</strong> figura
+          como afiliación verificada en Scopus. Si un docente publicó bajo otra afiliación (o sin afiliar a esta institución), esos
+          artículos no quedan contados acá — por eso algunos números pueden diferir de lo que ves directamente en Scopus.
         </p>
       </div>
 

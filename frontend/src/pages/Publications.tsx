@@ -6,6 +6,7 @@ import { useFitCount } from "../lib/useFitCount";
 import { useAvailableViewportHeight } from "../lib/useViewportFit";
 import { api, type PublicationSort } from "../lib/api";
 import { useApi } from "../lib/useApi";
+import { useInstitution } from "../lib/InstitutionContext";
 
 // A generous upper bound to fetch per "page" — how many actually render is
 // whatever whole rows fit on screen (see useFitCount), never this fixed
@@ -20,6 +21,7 @@ const FOOTER_HEIGHT = 66;
 type SortableColumn = Extract<PublicationSort, "year" | "citations">;
 
 export function Publications() {
+  const { selectedId } = useInstitution();
   const [searchParams, setSearchParams] = useSearchParams();
   const [year, setYear] = useState<string>(searchParams.get("year") ?? "");
   const [documentType, setDocumentType] = useState<string>(searchParams.get("document_type") ?? "");
@@ -30,19 +32,20 @@ export function Publications() {
   const { ref: fitAnchorRef, height: availableHeight } = useAvailableViewportHeight<HTMLDivElement>();
   const tbodyBudget = availableHeight ? Math.max(80, availableHeight - THEAD_HEIGHT - FOOTER_HEIGHT) : undefined;
 
-  const docTypes = useApi(api.documentTypes, []);
-  const years = useApi(api.growth, []);
+  const docTypes = useApi(() => api.documentTypes(selectedId ?? undefined), [selectedId]);
+  const years = useApi(() => api.growth(selectedId ?? undefined), [selectedId]);
   const publications = useApi(
     () =>
       api.publications({
         year: year ? Number(year) : undefined,
         documentType: documentType || undefined,
+        institutionId: selectedId ?? undefined,
         sort,
         sortDir,
         limit: FETCH_BATCH,
         offset,
       }),
-    [year, documentType, sort, sortDir, offset]
+    [year, documentType, selectedId, sort, sortDir, offset]
   );
 
   function resetPaging() {

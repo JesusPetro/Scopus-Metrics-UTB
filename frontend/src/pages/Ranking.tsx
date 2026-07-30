@@ -6,6 +6,7 @@ import { StatTile } from "../components/StatTile";
 import { IconNetwork } from "../components/icons";
 import { api } from "../lib/api";
 import { useApi } from "../lib/useApi";
+import { useInstitution } from "../lib/InstitutionContext";
 import { useStaggerReveal } from "../lib/motion";
 import { useElementSize } from "../lib/useElementSize";
 import { useFitCount } from "../lib/useFitCount";
@@ -41,10 +42,14 @@ function mergeRefs<T>(...refs: (Ref<T> | undefined)[]) {
 }
 
 export function Ranking() {
+  const { selectedId } = useInstitution();
   const [selected, setSelected] = useState<string | null>(null);
   const [documentType, setDocumentType] = useState<string>("");
-  const docTypes = useApi(api.documentTypes, []);
-  const topAuthors = useApi(() => api.topAuthors(50, documentType || undefined), [documentType]);
+  const docTypes = useApi(() => api.documentTypes(selectedId ?? undefined), [selectedId]);
+  const topAuthors = useApi(
+    () => api.topAuthors(50, documentType || undefined, selectedId ?? undefined),
+    [documentType, selectedId]
+  );
   const { ref: tableCardRef, height: tableCardHeight } = useElementSize<HTMLDivElement>();
   const { ref: viewportAnchorRef, height: availableHeight } = useAvailableViewportHeight<HTMLDivElement>(32);
   const tbodyBudget = availableHeight

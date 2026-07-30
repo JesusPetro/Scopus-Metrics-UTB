@@ -6,13 +6,15 @@ import { NetworkGraph } from "../components/charts/NetworkGraph";
 import { IconSearch, IconUsers } from "../components/icons";
 import { api } from "../lib/api";
 import { useApi } from "../lib/useApi";
+import { useInstitution } from "../lib/InstitutionContext";
 import { useElementSize } from "../lib/useElementSize";
 import { useGraphLayout } from "../lib/useGraphLayout";
 import { usePanZoom } from "../lib/usePanZoom";
 import type { CoauthorshipGraph as CoauthorshipGraphData } from "../lib/types";
 
 export function Coauthorship() {
-  const graph = useApi(api.coauthorship, []);
+  const { selectedId } = useInstitution();
+  const graph = useApi(() => api.coauthorship(selectedId ?? undefined), [selectedId]);
   const [searchParams, setSearchParams] = useSearchParams();
   const preselected = searchParams.get("author");
 

@@ -71,6 +71,24 @@ export function revealBars(container: SVGElement | null) {
   );
 }
 
+/** Draws in trend-line paths (comparative charts) via a stroke dash-offset sweep, plus their point markers fading in behind the sweep. */
+export function revealTrendLines(container: SVGElement | null) {
+  if (!container) return;
+  const lines = container.querySelectorAll<SVGPathElement>("[data-trend-line]");
+  const points = container.querySelectorAll<SVGGraphicsElement>("[data-trend-point]");
+  lines.forEach((line) => {
+    const length = line.getTotalLength();
+    gsap.fromTo(
+      line,
+      { strokeDasharray: length, strokeDashoffset: length },
+      { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }
+    );
+  });
+  if (points.length > 0) {
+    gsap.fromTo(points, { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.3, stagger: 0.03, delay: 0.4, ease: "back.out(2)", transformOrigin: "center" });
+  }
+}
+
 /** Horizontal counterpart to revealBars — draws bars in left-to-right, for HorizontalBarChart's row rects. */
 export function revealHBars(container: HTMLElement | SVGElement | null) {
   if (!container) return;

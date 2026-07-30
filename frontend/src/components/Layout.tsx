@@ -1,13 +1,15 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import gsap from "gsap";
-import { IconDocument, IconGrid, IconNetwork, IconRanking } from "./icons";
+import { IconCompare, IconDocument, IconGrid, IconNetwork, IconRanking } from "./icons";
+import { InstitutionSelect } from "./InstitutionSelect";
 
 const NAV_ITEMS = [
   { to: "/", label: "Overview", icon: IconGrid, end: true },
   { to: "/ranking", label: "Ranking", icon: IconRanking, end: false },
   { to: "/coautoria", label: "Coautoría", icon: IconNetwork, end: false },
   { to: "/publicaciones", label: "Publicaciones", icon: IconDocument, end: false },
+  { to: "/comparativa", label: "Comparativa", icon: IconCompare, end: false },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -23,6 +25,7 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-svh flex-col lg:flex-row">
       <aside className="flex shrink-0 flex-col gap-1 bg-navy-deep px-4 py-5 lg:sticky lg:top-0 lg:h-svh lg:w-60 lg:self-start lg:py-6">
+        <InstitutionSelect />
         <nav className="flex gap-1 overflow-x-auto lg:mt-1 lg:flex-col lg:overflow-visible">
           {NAV_ITEMS.map(({ to, label, icon: Icon, end }) => (
             <NavLink

@@ -20,17 +20,22 @@ import { Overview } from "./pages/Overview";
 import { Ranking } from "./pages/Ranking";
 import { Coauthorship } from "./pages/Coauthorship";
 import { Publications } from "./pages/Publications";
+import { Comparativa } from "./pages/Comparativa";
+import { InstitutionProvider } from "./lib/InstitutionContext";
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Overview />} />
-        <Route path="/ranking" element={<Ranking />} />
-        <Route path="/coautoria" element={<Coauthorship />} />
-        <Route path="/publicaciones" element={<Publications />} />
-      </Routes>
-    </Layout>
+    <InstitutionProvider>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Overview />} />
+          <Route path="/ranking" element={<Ranking />} />
+          <Route path="/coautoria" element={<Coauthorship />} />
+          <Route path="/publicaciones" element={<Publications />} />
+          <Route path="/comparativa" element={<Comparativa />} />
+        </Routes>
+      </Layout>
+    </InstitutionProvider>
   );
 }
 

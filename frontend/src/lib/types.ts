@@ -1,5 +1,14 @@
 // Mirrors worker/src/services/metrics.ts, worker/src/db/repositories/*.ts response shapes exactly.
 
+export interface Institution {
+  id: string;
+  name: string;
+  abbreviation: string;
+  scopusAffiliationId: string;
+  isDefault: boolean;
+  autoSync: boolean;
+}
+
 export interface YearCount {
   year: number;
   count: number;

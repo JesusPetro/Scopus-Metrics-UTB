@@ -127,6 +127,32 @@ export function IconMaximize({ className }: IconProps) {
   );
 }
 
+export function IconChevronDown({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill={base} stroke="currentColor" strokeWidth="2">
+      <path d="m6.5 9.5 5.5 5.5 5.5-5.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconCheck({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill={base} stroke="currentColor" strokeWidth="2.2">
+      <path d="m5 12.5 4.5 4.5L19 7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function IconCompare({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill={base} stroke="currentColor" strokeWidth="1.8">
+      <path d="M8 4v13.5a1.5 1.5 0 0 1-1.5 1.5H4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M16 20V6.5A1.5 1.5 0 0 1 17.5 5H20" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M4.5 8.5h7M12.5 15.5h7" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function IconUsers({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill={base} stroke="currentColor" strokeWidth="1.8">

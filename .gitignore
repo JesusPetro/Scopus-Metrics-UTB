@@ -92,6 +92,7 @@ node_modules/
 .wrangler/
 worker/dist/
 .dev.vars
+frontend/.env.local
 
 # Local DB dumps (large, not needed in the repo)
 worker/data_only.sql
