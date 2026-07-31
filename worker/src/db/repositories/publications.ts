@@ -9,14 +9,16 @@ export interface PublicationRow {
   document_type: string | null;
   source_title: string | null;
   cited_by_count: number;
+  /** Per-article OA status from Scopus (0/1) - not a statement about the journal as a whole. */
+  open_access: number;
 }
 
 export async function upsertPublication(db: D1Database, pub: ParsedPublication): Promise<void> {
   await db
     .prepare(
       `INSERT INTO publications
-         (id, title, doi, cover_date, year, document_type, source_title, cited_by_count, raw_json, updated_at)
-       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, CURRENT_TIMESTAMP)
+         (id, title, doi, cover_date, year, document_type, source_title, cited_by_count, open_access, raw_json, updated_at)
+       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, CURRENT_TIMESTAMP)
        ON CONFLICT(id) DO UPDATE SET
          title = excluded.title,
          doi = excluded.doi,
@@ -25,6 +27,7 @@ export async function upsertPublication(db: D1Database, pub: ParsedPublication):
          document_type = excluded.document_type,
          source_title = excluded.source_title,
          cited_by_count = excluded.cited_by_count,
+         open_access = excluded.open_access,
          raw_json = excluded.raw_json,
          updated_at = CURRENT_TIMESTAMP`
     )
@@ -37,6 +40,7 @@ export async function upsertPublication(db: D1Database, pub: ParsedPublication):
       pub.documentType,
       pub.sourceTitle,
       pub.citedByCount,
+      pub.isOpenAccess ? 1 : 0,
       JSON.stringify(pub.raw)
     )
     .run();
@@ -194,7 +198,7 @@ export async function listPublications(
   const { joins, where, binds } = buildPublicationQuery(opts);
   const sortColumn = SORT_COLUMNS[opts.sort ?? "date"];
   const sortDir = opts.sortDir === "asc" ? "ASC" : "DESC";
-  const sql = `SELECT DISTINCT p.id, p.title, p.doi, p.cover_date, p.year, p.document_type, p.source_title, p.cited_by_count
+  const sql = `SELECT DISTINCT p.id, p.title, p.doi, p.cover_date, p.year, p.document_type, p.source_title, p.cited_by_count, p.open_access
              FROM publications p${joins}${where}
              ORDER BY ${sortColumn} ${sortDir} LIMIT ? OFFSET ?`;
 

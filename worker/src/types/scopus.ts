@@ -39,6 +39,8 @@ export interface ParsedPublication {
   citedByCount: number;
   authors: ParsedAuthor[];
   subjectAreas: ParsedSubjectArea[];
+  /** Per-article OA status from Scopus's documented `openaccess` field - not a statement about the journal as a whole. */
+  isOpenAccess: boolean;
   raw: Record<string, unknown>;
 }
 
@@ -127,6 +129,7 @@ export function parseEntry(entry: Record<string, any>, affiliationId: string): P
     citedByCount: Number(entry["citedby-count"] ?? 0),
     authors,
     subjectAreas: parseSubjectAreas(entry),
+    isOpenAccess: entry["openaccess"] === "1",
     raw: entry,
   };
 }

@@ -29,6 +29,7 @@ const FIELDS = [
   "subtypeDescription",
   "author",
   "afid",
+  "openaccess",
 ].join(",");
 
 export interface AffiliationSearchResult {
