@@ -79,7 +79,17 @@ export function createScopusClient(env: Env): ScopusClient {
       throw new ScopusAuthError(`Invalid apikey or insttoken (${response.status}). ${base}`);
     }
     if (response.status === 429) {
-      throw new ScopusRateLimitError(`Rate limit reached (429). ${base}`);
+      // Elsevier reports quota state on every response via these headers -
+      // surface them here since the developer portal doesn't reliably show
+      // per-key quota/reset time, and this is the only place that does.
+      const limit = response.headers.get("X-RateLimit-Limit");
+      const remaining = response.headers.get("X-RateLimit-Remaining");
+      const resetRaw = response.headers.get("X-RateLimit-Reset");
+      const resetAt = resetRaw ? new Date(Number(resetRaw) * 1000).toISOString() : null;
+      const quotaInfo = resetAt
+        ? ` Quota resets at ${resetAt} (limit=${limit ?? "?"}, remaining=${remaining ?? "?"}).`
+        : "";
+      throw new ScopusRateLimitError(`Rate limit reached (429).${quotaInfo} ${base}`);
     }
     if (response.status >= 500) {
       throw new ScopusConnectionError(`Elsevier responded with ${response.status}. ${base}`);
