@@ -26,6 +26,7 @@ export function Overview() {
   const institutionName = institutions.find((i) => i.id === selectedId)?.name ?? "la institución seleccionada";
   const growth = useApi(() => api.growth(selectedId ?? undefined), [selectedId]);
   const docTypes = useApi(() => api.documentTypes(selectedId ?? undefined), [selectedId]);
+  const openAccess = useApi(() => api.openAccess(selectedId ?? undefined), [selectedId]);
   // Fetched generously; how many actually render is computed to fit Producción's
   // measured height exactly (see `investigadoresFit` below) — never a fixed count.
   const topAuthors = useApi(() => api.topAuthors(20, undefined, selectedId ?? undefined), [selectedId]);
@@ -178,6 +179,34 @@ export function Overview() {
           </StateBoundary>
         </Card>
       </div>
+
+      <Card
+        title="Acceso Abierto"
+        subtitle="Artículos disponibles en lectura abierta, según el indicador por artículo de Scopus."
+      >
+        <StateBoundary state={openAccess} isEmpty={(d) => d.length === 0}>
+          {(data) => {
+            const total = data.reduce((s, d) => s + d.count, 0) || 1;
+            const openCount = data.find((d) => d.openAccess)?.count ?? 0;
+            const openPct = Math.round((openCount / total) * 100);
+            return (
+              <>
+                <DonutChart
+                  data={data.map((d) => ({
+                    label: d.openAccess ? "Acceso abierto" : "Acceso restringido",
+                    value: d.count,
+                  }))}
+                />
+                <p className="mt-2 text-sm text-muted">
+                  {openPct}% de los artículos son de acceso abierto a nivel de artículo individual — este dato indica que
+                  ese artículo puntual puede leerse gratis, <strong className="font-semibold text-ink">no</strong> que la
+                  revista en la que se publicó sea de acceso abierto en su totalidad.
+                </p>
+              </>
+            );
+          }}
+        </StateBoundary>
+      </Card>
     </div>
   );
 }

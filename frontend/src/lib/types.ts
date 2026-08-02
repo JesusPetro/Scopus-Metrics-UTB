@@ -47,6 +47,11 @@ export interface CoauthorshipGraph {
   edges: CoauthorshipEdge[];
 }
 
+export interface OpenAccessCount {
+  openAccess: boolean;
+  count: number;
+}
+
 export interface AuthorSummary {
   authorId: string;
   fullName: string;
@@ -70,4 +75,6 @@ export interface PublicationRow {
   document_type: string | null;
   source_title: string | null;
   cited_by_count: number;
+  /** Per-article OA flag from Scopus - the article itself is openly readable, not necessarily its journal as a whole. */
+  open_access: number;
 }

@@ -9,6 +9,7 @@ import {
   coauthorshipGraph,
   topJournals,
   subjectAreaBreakdown,
+  openAccessBreakdown,
 } from "../services/metrics";
 
 export const statsRoutes = new Hono<{ Bindings: Env }>();
@@ -69,5 +70,12 @@ statsRoutes.get("/subject-areas", async (c) => {
   if (!institutionId) return c.json({ error: "Unknown institution" }, 404);
   const limit = Number(c.req.query("limit") ?? "12");
   const data = await subjectAreaBreakdown(c.env.DB, institutionId, limit);
+  return c.json({ data });
+});
+
+statsRoutes.get("/open-access", async (c) => {
+  const institutionId = await resolveInstitutionId(c);
+  if (!institutionId) return c.json({ error: "Unknown institution" }, 404);
+  const data = await openAccessBreakdown(c.env.DB, institutionId);
   return c.json({ data });
 });

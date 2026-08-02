@@ -4,6 +4,7 @@ import type {
   CoauthorshipGraph,
   DocumentTypeCount,
   Institution,
+  OpenAccessCount,
   PublicationRow,
   TopJournal,
   TopPublisher,
@@ -78,6 +79,12 @@ export const api = {
     const params = new URLSearchParams({ limit: String(limit) });
     if (institutionId) params.set("institution", institutionId);
     return request<TopJournal[]>(`/api/stats/top-journals?${params.toString()}`);
+  },
+  openAccess: (institutionId?: string) => {
+    const params = new URLSearchParams();
+    if (institutionId) params.set("institution", institutionId);
+    const qs = params.toString();
+    return request<OpenAccessCount[]>(`/api/stats/open-access${qs ? `?${qs}` : ""}`);
   },
   coauthorship: (institutionId?: string) => {
     const params = new URLSearchParams();

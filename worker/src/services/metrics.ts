@@ -100,6 +100,25 @@ export async function subjectAreaBreakdown(
   return results;
 }
 
+export interface OpenAccessCount {
+  /** Per-article `openaccess` flag from Scopus - describes the article itself, not whether its journal is open access as a whole. */
+  openAccess: boolean;
+  count: number;
+}
+
+export async function openAccessBreakdown(db: D1Database, institutionId: string): Promise<OpenAccessCount[]> {
+  const { results } = await db
+    .prepare(
+      `SELECT p.open_access as open_access, COUNT(DISTINCT p.id) as count
+       FROM publications p
+       ${INSTITUTION_PUBLICATIONS_JOIN}
+       GROUP BY p.open_access`
+    )
+    .bind(institutionId)
+    .all<{ open_access: number; count: number }>();
+  return results.map((r) => ({ openAccess: r.open_access === 1, count: r.count }));
+}
+
 export interface TopPublisher {
   author_id: string;
   full_name: string;

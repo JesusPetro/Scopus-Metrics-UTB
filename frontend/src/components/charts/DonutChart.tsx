@@ -104,6 +104,8 @@ export function DonutChart({
   }, [segments]);
 
   const total = Math.round(sum);
+  const hoveredSeg = hovered != null ? segments.find((s) => s.index === hovered) : undefined;
+  const hoveredPos = hoveredSeg ? point((hoveredSeg.start + hoveredSeg.end) / 2, OUTER_R + 16) : null;
 
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
@@ -144,6 +146,15 @@ export function DonutChart({
           <span className="text-2xl leading-none font-bold tracking-tight text-ink">{total.toLocaleString("es-CO")}</span>
           <span className="mt-1.5 text-[11px] font-semibold tracking-wide text-muted uppercase">Documentos</span>
         </div>
+
+        {hoveredSeg && hoveredPos && (
+          <div
+            className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rounded-lg px-2.5 py-1.5 text-[12.5px] font-semibold whitespace-nowrap text-white"
+            style={{ left: hoveredPos[0], top: hoveredPos[1], backgroundColor: "var(--color-navy-deep)" }}
+          >
+            {hoveredSeg.label} · {Math.round(hoveredSeg.value).toLocaleString("es-CO")}
+          </div>
+        )}
       </div>
 
       <ul className="flex w-full min-w-0 flex-1 flex-col gap-1">

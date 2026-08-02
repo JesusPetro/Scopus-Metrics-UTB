@@ -60,6 +60,11 @@ export function Comparativa() {
     [selectedIds]
   );
 
+  const openAccessBreakdowns = useApi(
+    () => Promise.all(selectedIds.map((id) => api.openAccess(id).then((data) => ({ id, data })))),
+    [selectedIds]
+  );
+
   const tilesRef = useStaggerReveal<HTMLDivElement>([selectedIds.length, documentType]);
 
   if (!ready) return null;
@@ -162,6 +167,44 @@ export function Comparativa() {
             }
           </StateBoundary>
         </div>
+
+        <Card
+          title="Acceso Abierto Comparado"
+          subtitle="Porcentaje de artículos de acceso abierto por institución — indicador por artículo de Scopus, no una calificación de la revista."
+        >
+          <StateBoundary
+            state={openAccessBreakdowns}
+            isEmpty={(rows) => rows.every((r) => r.data.length === 0)}
+            emptyHint="Sin datos de acceso abierto para las instituciones elegidas."
+          >
+            {(rows) => (
+              <ul className="flex flex-col gap-4">
+                {rows.map((r) => {
+                  const name = institutions.find((i) => i.id === r.id)?.abbreviation ?? r.id;
+                  const total = r.data.reduce((s, d) => s + d.count, 0) || 1;
+                  const openCount = r.data.find((d) => d.openAccess)?.count ?? 0;
+                  const pct = Math.round((openCount / total) * 100);
+                  return (
+                    <li key={r.id}>
+                      <div className="mb-1.5 flex items-center justify-between text-sm">
+                        <span className="font-medium text-ink">{name}</span>
+                        <span className="font-semibold text-muted">
+                          {pct}% · {openCount.toLocaleString("es-CO")} de {total.toLocaleString("es-CO")}
+                        </span>
+                      </div>
+                      <div className="h-2 w-full overflow-hidden rounded-full bg-line">
+                        <div
+                          className="h-full rounded-full bg-utb-green transition-[width] duration-500"
+                          style={{ width: `${Math.max(pct, 1)}%` }}
+                        />
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </StateBoundary>
+        </Card>
       </div>
     </div>
   );
